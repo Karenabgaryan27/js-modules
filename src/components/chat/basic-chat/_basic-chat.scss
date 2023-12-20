@@ -1,0 +1,169 @@
+.basic-chat {
+    color: #000;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 4px 12px;
+    display: flex;
+    flex-direction: column;
+    // height: 100%;
+    border-radius: 6px;
+    overflow: hidden;
+    &-header {
+        padding: 10px 20px;
+        background-color: #fff;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &-body {
+        flex: 1;
+        position: relative;
+        padding: 10px 0;
+        padding-right: 10px;
+        background-color: rgb(246, 246, 247);
+
+        .chat-log {
+            padding: 30px 20px;
+            overflow-y: auto;
+            height: 500px;
+            // scroll-behavior: smooth;
+
+            // makes basic-chat-log height relative to parent height
+            &.use-parent-height {
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100% !important;
+            }
+            //
+
+            .load {
+                max-width: 80px;
+            }
+            &::-webkit-scrollbar {
+                width: 7px;
+            }
+            &::-webkit-scrollbar-thumb {
+                background-color: rgba(0, 0, 0, 0.1);
+                border-radius: 50px;
+                &:hover {
+                    background-color: rgba(0, 0, 0, 0.2);
+                }
+                &:active {
+                    background-color: rgba(0, 0, 0, 0.3);
+                }
+            }
+        }
+
+        .message {
+            margin-bottom: 1.2rem;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            &.position {
+                &-right {
+                    align-items: flex-end;
+                    .details {
+                        &-date {
+                        }
+                    }
+                    .message {
+                        &-text {
+                            background-color: rgb(32, 0, 240);
+                            color: #fff;
+                            text-align: right;
+                        }
+                    }
+                }
+            }
+            .details {
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+                gap: 3px;
+                font-size: 12px;
+                color: rgb(112, 112, 112);
+                &-identity {
+                }
+                &-date {
+                    text-align: right;
+                }
+            }
+            &-text {
+                padding: 15px;
+                border-radius: 6px;
+                background-color: #fff;
+                box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px;
+                color: color(secondary);
+                font-size: 14px;
+                color: #000;
+                max-width: 350px;
+
+                // font-family: "Noto Sans", sans-serif;
+            }
+        }
+    }
+    &-footer {
+        background-color: #fff;
+        & > .wrapper {
+            position: relative;
+            .field {
+                flex: 1;
+                .form-control {
+                    border: none;
+                    padding: 15px;
+                    padding-right: 80px;
+                    &::placeholder {
+                        text-transform: none;
+                    }
+                }
+                
+            }
+            .send-btn {
+                padding: 3px 5px;
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                right: 15px;
+                min-width: auto;
+                background-color: rgb(32, 0, 240);
+                svg {
+                    height: 30px;
+                    width: auto;
+                }
+            }
+        }
+    }
+}
+
+// PRELOADER
+
+.bouncing-loader {
+    display: flex;
+    padding:10px 30px;
+  }
+  
+  .bouncing-loader > div {
+    width: 10px;
+    height: 10px;
+    margin: 3px 3px;
+    border-radius: 50%;
+    background-color: #a3a1a1;
+    opacity: 1;
+    animation: bouncing-loader 0.6s infinite alternate;
+  }
+
+  @keyframes bouncing-loader {
+    to {
+      opacity: 0.1;
+      transform: translateY(-7px);
+    }
+  }
+  
+  .bouncing-loader > div:nth-child(2) {
+    animation-delay: 0.2s;
+  }
+  
+  .bouncing-loader > div:nth-child(3) {
+    animation-delay: 0.4s;
+  }

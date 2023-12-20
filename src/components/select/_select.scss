@@ -1,0 +1,153 @@
+.select {
+    position: relative;
+    user-select: none;
+    // width: fit-content;
+    width: 100%;
+    max-width: 250px;
+    * {
+        font-family: "Roboto";
+    }
+     // .btn {
+    //     all: unset;
+    // }
+    &.active {
+        .select {
+            &-toggle {
+                border-bottom-left-radius: 0;
+                border-bottom-right-radius: 0;
+                &-icon {
+                    svg {
+                        transform: rotate(180deg);
+                    }
+                }
+            }
+            &-menu {
+                opacity: 1;
+                transform: none;
+                pointer-events: auto;
+            }
+        }
+    }
+    &-toggle,
+    &-item {
+        display: flex;
+        align-items: center;
+        .startIcon,
+        .endIcon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+
+            svg,
+            img {
+                height: 16px;
+                width: 16px;
+                object-fit: contain;
+                fill: currentColor;
+            }
+        }
+        .endIcon {
+            margin-left: 10px;
+        }
+        .startIcon {
+            margin-right: 10px;
+        }
+    }
+    &-toggle {
+        padding: 6px 16px;
+        cursor: pointer;
+        width: 100%;
+        justify-content: space-between;
+        text-transform: none;
+        & > .wrapper {
+            display: flex;
+            align-items: center;
+            // width: 88%;
+            overflow: hidden;
+            &.placeholder {
+                opacity: 0.7;
+            }
+        }
+        &-title {
+            white-space: nowrap;
+            overflow-x: hidden;
+            text-overflow: ellipsis;
+            &::first-letter {
+                text-transform: uppercase;
+            }
+        }
+        &-icon {
+            svg {
+                transition-duration: 300ms;
+                transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+                transition-property: opacity, transform;
+            }
+        }
+    }
+   
+    &-menu {
+        padding: 2px; // for outline
+        background-color: #fff;
+        border-bottom-right-radius: 5px;
+        border-bottom-left-radius: 5px;
+        position: absolute;
+        z-index: 1;
+        top: 100%;
+        left: 0;
+        min-width: 100%;
+        box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14),
+            0px 1px 3px 0px rgba(0, 0, 0, 0.1);
+        transform: rotateX(-90deg);
+        transform-origin: center top;
+        opacity: 0;
+        pointer-events: none;
+        will-change: transform, opacity;
+        max-height: 16rem;
+        overflow-y: auto;
+        transition-duration: 300ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        transition-property: opacity, transform;
+        &::-webkit-scrollbar {
+            -webkit-appearance: none;
+            width: 8px;
+            height: 8px;
+        }
+        &::-webkit-scrollbar-thumb {
+            cursor: pointer;
+            border-radius: 5px;
+            background: rgba(0, 0, 0, 0.1);
+            transition: color 0.2s ease;
+        }
+        &::-webkit-scrollbar-track {
+            background: rgba(0, 0, 0, 0.02);
+            border-radius: 0;
+        }
+    }
+    
+    &-item {
+        width: 100%;
+        font-size: 1rem;
+        padding: 6px 16px;
+        cursor: pointer;
+        line-height: 1.2;
+        // transition: background-color 0.3s ease;
+        &.active {
+            background-color: rgba(0, 0, 0, 0.1);
+        }
+        &.disabled {
+            opacity: 0.5;
+            pointer-events: none;
+        }
+        &-title {
+            overflow-x:hidden;
+            text-overflow: ellipsis;
+            &::first-letter {
+                text-transform: uppercase;
+            }
+        }
+        &:hover:not(.active) {
+            background-color: rgba(0, 0, 0, 0.04);
+        }
+    }
+}

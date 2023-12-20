@@ -1,0 +1,79 @@
+// FLEX VARIANT CARDS
+.illustration-card-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+.illustration-card {
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.4);
+    width: 100%;
+    &-purp {
+        background-color: #9e8fc7;
+    }
+    &-blue {
+        background-color: #4f8cdd;
+    }
+    &-black {
+        background-color: #3b2c41;
+    }
+
+    @include mq(576px) {
+        width: calc(100% / 2 - 20px / 2);
+    }
+    @include mq(992px) {
+        width: calc(100% / 3 - (20px * 2) / 3);
+    }
+    .card {
+        &-title {
+            color: white;
+            font-size: 2rem;
+            font-weight: 600;
+          
+        }
+    
+        &-image {
+            display: block;
+            width: 100%;
+        }
+    }
+}
+
+// GRID VARIANT CARDS
+.illustrationV2-card-group {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    justify-content: center;
+    grid-gap: 20px;
+}
+.illustrationV2-card {
+    border-radius: 15px;
+    padding: 20px;
+    width: 100%;
+    box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.4);
+    &-purp {
+        background-color: #9e8fc7;
+    }
+    &-blue {
+        background-color: #4f8cdd;
+    }
+    &-black {
+        background-color: #3b2c41;
+    }
+
+    .card {
+        &-title {
+            color: white;
+            font-size: 2rem;
+            font-weight: 600;
+          
+        }
+        &-image {
+            display: block;
+            width: 100%;
+        }
+    }
+}
+

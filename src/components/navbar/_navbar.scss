@@ -1,0 +1,233 @@
+// to prevent navbar glitching while switching page, work with vw instead of % and min-height instead of padding
+.navbar {
+    top: 0;
+    left: 0;
+    position: fixed;
+    z-index: 998;
+    // width: 100%;
+    width: calc(100vw - 10px);// ::-webkit-scrollbar {width: 10px}
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    background-color: color(primary);
+    transition: padding 0.3s ease;
+    &.shrink {
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+    }
+
+    & > .container-fluid {
+        display: flex;
+        flex-wrap: inherit;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &-toggler {
+        background-color: transparent;
+        border: none;
+        padding: 10px;
+        cursor: pointer;
+    }
+
+    &-brand {
+        padding-top: 0.3125rem;
+        padding-bottom: 0.3125rem;
+        margin-right: 1rem;
+        font-size: 1.25rem;
+        text-decoration: none;
+        white-space: nowrap;
+        color: #fff;
+    }
+
+    &-collapse {
+        max-width: 100%;
+        flex-grow: 1;
+        height: auto;
+        display: none;
+    }
+
+    &-nav {
+        display: flex;
+        align-items: center;
+        padding-left: 0;
+        margin-bottom: 0;
+        list-style: none;
+        margin-right: auto;
+
+        .nav-link,
+        .dropdown-toggle {
+            padding: 0.5rem 1rem;
+            color: #fff;
+            text-transform: capitalize;
+            font-size: 1rem;
+            font-weight: 400;
+            background-color: transparent;
+            border: none;
+            // outline: none;
+            display: block;
+            text-decoration: none;
+            font-family: inherit;
+            transition: color 0.3s ease;
+            .btn {
+                padding: 0;
+            }
+            &.active {
+                color: #000;
+            }
+            &:hover:not(.active) {
+                color: rgba(255, 255, 255, 0.7);
+            }
+        }
+    }
+    .dropdown {
+        // &.active {
+        //     .dropdown-toggle-icon {
+        //         svg {
+        //             transform: rotateZ(180deg);
+        //         }
+        //     }
+        // }
+        .dropdown-toggle {
+            display: flex;
+            .ripple {
+                display: none;
+            }
+            // &-icon {
+            //     svg {
+            //         transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            //     }
+            // }
+        }
+    }
+    .accordion {
+        &-body {
+            padding: 0;
+        }
+        &-item {
+            border-radius: 0 !important;
+        }
+    }
+    .drawer {
+        padding: 0;
+        &-close {
+            display: flex;
+            margin-left: auto !important;
+        }
+        .nav-link,
+        .dropdown-toggle {
+            text-transform: capitalize;
+            padding: 15px 20px;
+            display: block;
+            &:hover {
+                background-color: rgba(0, 0, 0, 0.05);
+            }
+        }
+        &-close {
+            margin: 1rem;
+        }
+        .accordion {
+            &-button {
+                font-size: 1rem;
+                text-transform: capitalize;
+            }
+
+            .nav-link,
+            .dropdown-toggle {
+                padding-left: 50px;
+            }
+        }
+    }
+}
+
+@media (min-width: 992px) {
+    .navbar-expand-lg {
+        .navbar {
+            &-toggler {
+                display: none;
+            }
+            &-collapse {
+                display: flex;
+            }
+        }
+        .drawer {
+            display: none !important;
+            &-backdrop {
+                display: none;
+            }
+        }
+    }
+}
+
+// @keyframes navLinkFade {
+//     0% {
+//         opacity: 0;
+//         transform: translateX(-30%);
+//     }
+//     50% {
+//         opacity: 0;
+//     }
+
+//     100% {
+//         opacity: 1;
+//         transform: translateX(0%);
+//     }
+// }
+
+// --------------------------  BURGER
+.navbar-toggler {
+    .burger {
+        cursor: pointer;
+        position: relative;
+        width: 30px;
+        height: 20px;
+        position: relative;
+        z-index: 3;
+        span {
+            position: absolute;
+            background-color: #fff;
+            position: absolute;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            top: 50%;
+            transform: translateY(-50%);
+            border-radius: 50rem;
+            transition: all 0.3s ease 0s;
+        }
+        &:before,
+        &:after {
+            content: "";
+            background-color: #fff;
+            position: absolute;
+            width: 100%;
+            height: 3px;
+            left: 0;
+            border-radius: 50rem;
+            transition: all 0.3s ease 0s;
+        }
+        &:before {
+            top: 0;
+        }
+        &:after {
+            bottom: 0;
+        }
+    }
+
+    // &.active {
+    //     .burger span {
+    //         transform: scale(0);
+    //     }
+    //     .burger:before {
+    //         top: 50%;
+    //         transform: translateY(-50%) rotate(45deg);
+    //     }
+    //     .burger:after {
+    //         top: 50%;
+    //         transform: translateY(-50%) rotate(-45deg);
+    //     }
+    // }
+}

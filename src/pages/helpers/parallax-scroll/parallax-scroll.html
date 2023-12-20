@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="/src/styles/index.css" />
+        <!-- <script src="/src/scripts/page-fade/page-fade.js" defer></script> -->
+        <script src="/src/components/navbar/navbar.js" defer></script>
+        <script src="/src/components/dropdown/dropdown.js" defer></script>
+        <script src="/src/components/collapse/collapse.js" defer></script>
+        <script src="/src/components/drawer/drawer.js" defer></script>
+    </head>
+    <body style="background-color: #111">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="/index.html">Navbar</a>
+                <button
+                    class="navbar-toggler altCollapsed btn btn-lg btn-circle-light"
+                    type="button"
+                    data-target="#navbar-drawer"
+                    data-toggle="drawer"
+                >
+                    <div class="burger">
+                        <span></span>
+                    </div>
+                </button>
+                 <div class="drawer drawer-left" id="navbar-drawer">
+                    <button
+                        class="drawer-close btn btn-circle-dark"
+                        data-dismiss="drawer"
+                    >
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                            <path
+                                d="M310.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L160 210.7 54.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L114.7 256 9.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 301.3 265.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L205.3 256 310.6 150.6z"
+                            />
+                        </svg>
+                    </button>
+                     <a class="nav-link" href="/index.html">Home</a>
+                    <a class="nav-link" href="/src/pages/about/about.html  ">about</a>
+                    <a class="nav-link" href="/src/pages/products/products.html  ">products</a>
+                </div>
+                <div class="navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="/index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/src/pages/about/about.html  ">about</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/src/pages/products/products.html  ">products</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex">
+                      <div class="search">
+                            <div class="input-group">
+                                <input
+                                    type="text"
+                                    name="search-1"
+                                    id="search-1"
+                                    class="form-control form-control-light"
+                                    placeholder="field"
+                                />
+                                <button class="btn btn-text-light search-toggler">
+                                    <svg
+                                        width="14"
+                                        height="14"
+                                        viewBox="0 0 14 14"
+                                        fill="none"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                        <path
+                                            fill-rule="evenodd"
+                                            clip-rule="evenodd"
+                                            d="M9.68208 10.7458C8.66576 11.5361 7.38866 12.0067 6.00167 12.0067C2.68704 12.0067 0 9.31891 0 6.00335C0 2.68779 2.68704 0 6.00167 0C9.31631 0 12.0033 2.68779 12.0033 6.00335C12.0033 7.39059 11.533 8.66794 10.743 9.6845L13.7799 12.7186C14.0731 13.0115 14.0734 13.4867 13.7806 13.7799C13.4878 14.0731 13.0128 14.0734 12.7196 13.7805L9.68208 10.7458ZM10.5029 6.00335C10.5029 8.49002 8.48765 10.5059 6.00167 10.5059C3.5157 10.5059 1.50042 8.49002 1.50042 6.00335C1.50042 3.51668 3.5157 1.50084 6.00167 1.50084C8.48765 1.50084 10.5029 3.51668 10.5029 6.00335Z"
+                                            fill="#868FA0"
+                                        />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </nav>
+        <header class="hero nature">
+            <img class="natureRellax" data-rellax-speed="-10" src="/src/assets/images/parallax/nature/6.png" alt="" />
+            <img
+                class="natureRellax left"
+                data-rellax-speed="-8"
+                src="/src/assets/images/parallax/nature/5.png"
+                alt=""
+            />
+            <img class="natureRellax" data-rellax-speed="-8" src="/src/assets/images/parallax/nature/4.png" alt="" />
+            <img class="natureRellax" data-rellax-speed="-7" src="/src/assets/images/parallax/nature/3.png" alt="" />
+            <h1 class="display-2 natureRellax" data-rellax-speed="-8">Parallax.</h1>
+            <img
+                class="natureRellax left"
+                data-rellax-speed="-5"
+                src="/src/assets/images/parallax/nature/2.png"
+                alt=""
+            />
+            <img class="right" src="/src/assets/images/parallax/nature/1.png" alt="" />
+        </header>
+
+        <main class="parallax-scroll-page">
+            <!-- <section class=" moon-light">
+                <div class="container">
+                    <img class="bg rellax" data-rellax-speed="-8" src="/src/assets/images/parallax/bg.jpg" alt="" />
+                    <img
+                        class="moon parallax"
+                        data-parallax-horizontal="true"
+                        data-parallax-speed="0.6"
+                        src="/src/assets/images/parallax/moon.png"
+                        alt=""
+                    />
+                    <img
+                        class="mountain rellax"
+                        data-rellax-speed="5"
+                        src="/src/assets/images/parallax/mountain.png"
+                        alt=""
+                    />
+                    <h1 class="hero-title display-1 rellax" data-rellax-speed="-8">moon light</h1>
+                    <img class="road" src="/src/assets/images/parallax/road.png" alt="" />
+                </div>
+            </section> -->
+            <section class="css-attachment-parallax">
+                <div class="container">
+                    <h2 class="title display-2">CSS background attachment</h2>
+                    <p class="description">description text here</p>
+                    <img class="image" src="/src/assets/images/plant.png" />
+                </div>
+            </section>
+
+            <section class="js-parallax">
+                <img class="bgimage parallax" src="/src/assets/images/collection/trees.jpg" />
+                <div class="container">
+                    <h2 class="title display-2 parallax" data-parallax-speed="-0.1">JS parallax</h2>
+                    <p class="description parallax" data-parallax-speed="0.03" data-parallax-horizontal="true">
+                        description text here
+                    </p>
+                    <img class="image parallax" data-parallax-speed="0.1" src="/src/assets/images/plant.png" />
+                </div>
+            </section>
+
+            <section class="rellax-parallax">
+                <img class="bgimage rellax" src="/src/assets/images/collection/trees.jpg" />
+                <div class="container">
+                    <h2 class="title display-2 rellax" data-rellax-speed="1">Rellax parallax</h2>
+                    <p class="description rellax" data-rellax-speed="2">description text here</p>
+                    <img class="image rellax" data-rellax-speed="1" src="/src/assets/images/plant.png" />
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <div class="container">
+                <h2 class="display-2">footer</h2>
+<div
+                    class="links-group"
+                    style="display: inline-flex; align-items: flex-start; flex-direction: column"
+                >
+                    <a href="#/" target="_blank" class="link link-secondary"> external link default </a>
+                    <a href="#/" target="_blank" class="link link-primary" underline="hover">
+                        external link hover
+                    </a>
+                    <a href="#/" target="_blank" class="link link-success" underline="always">
+                        external link always
+                    </a>
+                    <a href="#/" target="_blank" class="link link-danger" underline="none"> external link none </a>
+                </div>
+            </div>
+        </footer>
+        <!-- parallax scroll -->
+        <script src="/src/scripts/parallax-scroll.js"></script>
+        <script>
+            const parallaxScroll = new ParallaxScroll(".parallax");
+        </script>
+
+        <!-- RELAX PARALLAX SCROLL -->
+        <script src="/src/scripts/rellax.js"></script>
+        <!-- <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/rellax/1.12.1/rellax.min.js"
+            integrity="sha512-f5HTYZYTDZelxS7LEQYv8ppMHTZ6JJWglzeQmr0CVTS70vJgaJiIO15ALqI7bhsracojbXkezUIL+35UXwwGrQ=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        ></script> -->
+
+        <script>
+            const natureRellax = new Rellax(".natureRellax", {
+                // center: true,
+                // wrapper: ".nature",
+                // speed: 4
+                // vertical: false,
+            });
+            const rellax = new Rellax(".rellax", {
+                // wrapper: ".rellax-parallax",
+                center: true,
+                // horizontal: true,
+                // vertical: false,
+            });
+        </script>
+    </body>
+</html>

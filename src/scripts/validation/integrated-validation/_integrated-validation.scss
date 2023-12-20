@@ -1,0 +1,31 @@
+.valid-feedback,
+.invalid-feedback {
+    display: none;
+    width: 100%;
+    margin-top: 0.25rem;
+    font-size: 0.875em;
+}
+.valid-feedback {
+    color: color(success);
+}
+.invalid-feedback {
+    color: color(danger);
+}
+
+// INTEGREATED VALIDATION
+.was-validated {
+    .form-control {
+        &:valid {
+            border-color: color(success);
+            & ~ .valid-feedback {
+                display: block;
+            }
+        }
+        &:invalid {
+            border-color: color(danger);
+            & ~ .invalid-feedback {
+                display: block;
+            }
+        }
+    }
+}

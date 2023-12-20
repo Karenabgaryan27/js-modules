@@ -1,0 +1,1016 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="/src/styles/index.css" />
+        <!-- <script src="/src/scripts/page-fade/page-fade.js" defer></script> -->
+        <script src="/src/components/navbar/navbar.js" defer></script>
+        <script src="/src/components/dropdown/dropdown.js" defer></script>
+        <script src="/src/components/collapse/collapse.js" defer></script>
+        <script src="/src/components/button/button.js" defer></script>
+        <script src="/src/scripts/lock.js"></script>
+        <!-- SWIPER -->
+        <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+        <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+        <!-- <script src="/src/components/swiper/carousel/carousel.js" defer></script> -->
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="/index.html">Navbar</a>
+                <button
+                    class="navbar-toggler altCollapsed btn btn-lg btn-circle-light"
+                    type="button"
+                    data-target="#navbar-drawer"
+                    data-toggle="drawer"
+                >
+                    <div class="burger">
+                        <span></span>
+                    </div>
+                </button>
+                <div class="drawer drawer-left" id="navbar-drawer">
+                    <button class="drawer-close btn btn-circle-dark" data-dismiss="drawer">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                            <path
+                                d="M310.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L160 210.7 54.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L114.7 256 9.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 301.3 265.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L205.3 256 310.6 150.6z"
+                            />
+                        </svg>
+                    </button>
+                    <a class="nav-link" href="/index.html">Home</a>
+                    <a class="nav-link" href="/src/pages/about/about.html  ">about</a>
+                    <a class="nav-link" href="/src/pages/products/products.html  ">products</a>
+                </div>
+                <div class="navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="/index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/src/pages/about/about.html  ">about</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/src/pages/products/products.html  ">products</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex">
+                        <div class="search">
+                            <div class="input-group">
+                                <input
+                                    type="text"
+                                    name="search-1"
+                                    id="search-1"
+                                    class="form-control form-control-light"
+                                    placeholder="field"
+                                />
+                                <button class="btn btn-text-light search-toggler">
+                                    <svg
+                                        width="14"
+                                        height="14"
+                                        viewBox="0 0 14 14"
+                                        fill="none"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                        <path
+                                            fill-rule="evenodd"
+                                            clip-rule="evenodd"
+                                            d="M9.68208 10.7458C8.66576 11.5361 7.38866 12.0067 6.00167 12.0067C2.68704 12.0067 0 9.31891 0 6.00335C0 2.68779 2.68704 0 6.00167 0C9.31631 0 12.0033 2.68779 12.0033 6.00335C12.0033 7.39059 11.533 8.66794 10.743 9.6845L13.7799 12.7186C14.0731 13.0115 14.0734 13.4867 13.7806 13.7799C13.4878 14.0731 13.0128 14.0734 12.7196 13.7805L9.68208 10.7458ZM10.5029 6.00335C10.5029 8.49002 8.48765 10.5059 6.00167 10.5059C3.5157 10.5059 1.50042 8.49002 1.50042 6.00335C1.50042 3.51668 3.5157 1.50084 6.00167 1.50084C8.48765 1.50084 10.5029 3.51668 10.5029 6.00335Z"
+                                            fill="#868FA0"
+                                        />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </nav>
+        <header class="hero">
+            <div class="container">
+                <h1 class="hero-title display-1">carousel</h1>
+            </div>
+        </header>
+
+        <main class="carousel-page">
+            <!-- <section id="lightbox">
+                <div class="container">
+                    <h2 class="display-2">lightbox</h2>
+                    <div class="gallery">
+                        <img
+                            class="item"
+                            width="300"
+                            data-toggle="lightbox"
+                            data-target="#lightboxExample"
+                            src="/src/assets/images/collection/flowers.jpg"
+                            alt=""
+                            data-toggle="lightbox"
+                            data-index="0"
+                        />
+
+                        <div
+                            style="display: inline-block"
+                            data-target="#lightboxExample"
+                            data-toggle="lightbox"
+                            data-index="1"
+                            width="300"
+                            class="item"
+                            data-video-image-src="/src/assets/images/collection/mountains.jpg"
+                            data-video-src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
+                        >
+                            <img width="300" src="/src/assets/images/collection/mountains.jpg" alt="" />
+                        </div>
+                        <img
+                            class="item"
+                            width="300"
+                            data-toggle="lightbox"
+                            data-target="#lightboxExample"
+                            src="/src/assets/images/collection/waterfall.jpg"
+                            alt=""
+                            data-toggle="lightbox"
+                            data-index="2"
+                        />
+                    </div>
+
+                    <div class="lightbox fade" id="lightboxExample" style="display: none">
+                        <div class="lightbox-arrows">
+                            <div
+                                class="lightbox-angle prev btn btn-circle-light"
+                                data-toggle="prev-lightbox"
+                                data-dismiss="prevent-bubbling"
+                            >
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+                                    <path
+                                        d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l192 192c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 278.6 86.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-192 192z"
+                                    />
+                                </svg>
+                            </div>
+                            <div
+                                class="lightbox-angle next btn btn-circle-light"
+                                data-toggle="next-lightbox"
+                                data-dismiss="prevent-bubbling"
+                            >
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+                                    <path
+                                        d="M342.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L274.7 256 105.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"
+                                    />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="lightbox-content show">
+                            <div class="wrapper">
+                                <img class="cover" alt="" />
+
+                                <video class="video-cover" controls></video>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section> -->
+
+            <section id="carousel-section">
+                <div class="container">
+                    <h2 class="display-2">carousel</h2>
+                    <div class="carousel" id="carousel-example">
+                        <div class="swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="card carousel-card">
+                                        <h4 class="display-6">title 1</h4>
+                                        <img src="/src/assets/images/collection/flowers.jpg" alt="image" />
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="card carousel-card">
+                                        <h4 class="display-6">title 2</h4>
+                                        <img src="/src/assets/images/rest/vertical.jpg" alt="image" />
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="card carousel-card">
+                                        <h4 class="display-6">title 3</h4>
+                                        <img src="/src/assets/images/collection/mountains.jpg" alt="image" />
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="card carousel-card">
+                                        <h4 class="display-6">title 4</h4>
+                                        <img src="/src/assets/images/collection/waterfall.jpg" alt="image" />
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="card carousel-card">
+                                        <h4 class="display-6">title 5</h4>
+                                        <img src="/src/assets/images/collection/waterfall.jpg" alt="image" />
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- If we need pagination -->
+                            <!-- <div class="swiper-pagination"></div> -->
+
+                            <!-- If we need navigation buttons -->
+
+                            <!-- If we need scrollbar -->
+                            <!-- <div class="swiper-scrollbar"></div> -->
+                        </div>
+
+                        <div class="carousel-angles">
+                            <span class="carousel-angle prev btn btn-circle-dark">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512">
+                                    <path
+                                        d="M192 448c-8.188 0-16.38-3.125-22.62-9.375l-160-160c-12.5-12.5-12.5-32.75 0-45.25l160-160c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25L77.25 256l137.4 137.4c12.5 12.5 12.5 32.75 0 45.25C208.4 444.9 200.2 448 192 448z"
+                                    />
+                                </svg>
+                            </span>
+                            <span class="carousel-angle next btn btn-circle-dark">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512">
+                                    <path
+                                        d="M64 448c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L178.8 256L41.38 118.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l160 160c12.5 12.5 12.5 32.75 0 45.25l-160 160C80.38 444.9 72.19 448 64 448z"
+                                    />
+                                </svg>
+                            </span>
+                        </div>
+                    </div>
+                    <script>
+                        const carousel = new Swiper("#carousel-example .swiper", {
+                            slidesPerView: 1,
+                            // slidesPerGroup:4,
+                            spaceBetween: 10,
+                            navigation: {
+                                nextEl: "#carousel-example .next",
+                                prevEl: "#carousel-example .prev",
+                            },
+                            breakpoints: {
+                                640: {
+                                    slidesPerView: 2,
+                                },
+                                768: {
+                                    slidesPerView: 3,
+                                },
+                                992: {
+                                    slidesPerView: 4,
+                                },
+                            },
+                        });
+                    </script>
+                </div>
+            </section>
+
+            <section id="lightbox-section">
+                <div class="container">
+                    <h2 class="display-2">lightbox</h2>
+                    <div class="lightbox">
+                        <div class="gallery">
+                            <img
+                                data-index="0"
+                                data-toggle="lightbox"
+                                data-target="#carousel-example-in-lightbox-backdrop"
+                                src="/src/assets/images/collection/flowers.jpg"
+                                alt=""
+                            />
+                            <img
+                                data-index="1"
+                                data-toggle="lightbox"
+                                data-target="#carousel-example-in-lightbox-backdrop"
+                                src="/src/assets/images/rest/vertical.jpg"
+                                alt=""
+                            />
+                            <img
+                                data-index="2"
+                                data-toggle="lightbox"
+                                data-target="#carousel-example-in-lightbox-backdrop"
+                                src="/src/assets/images/collection/mountains.jpg"
+                                alt=""
+                            />
+                            <img
+                                data-index="3"
+                                data-toggle="lightbox"
+                                data-target="#carousel-example-in-lightbox-backdrop"
+                                src="/src/assets/images/collection/waterfall.jpg"
+                                alt=""
+                            />
+                        </div>
+
+                        <!-- keep backdrop to display none in tag itself to avoid focus interactions initially  -->
+                        <div class="backdrop" style="display: none">
+                            <button
+                                class="btn btn-circle-light btn-lg backdrop-closer"
+                                data-dismiss="lightbox"
+                                data-target="#carousel-example-in-lightbox-backdrop"
+                            >
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                                    <path
+                                        d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"
+                                    />
+                                </svg>
+                            </button>
+
+                            <!-- carousel data-instance-name should be the same as the Swiper instance name (instanceName = new Swiper)  -->
+                            <div
+                                class="carousel"
+                                id="carousel-example-in-lightbox-backdrop"
+                                data-instance-name="carouselExampleInLightboxBackdrop"
+                            >
+                                <div class="swiper">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <img src="/src/assets/images/collection/flowers.jpg" alt="image" />
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="/src/assets/images/rest/vertical.jpg" alt="image" />
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="/src/assets/images/collection/mountains.jpg" alt="image" />
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="/src/assets/images/collection/waterfall.jpg" alt="image" />
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="/src/assets/images/collection/waterfall.jpg" alt="image" />
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="carousel-angles">
+                                    <span class="carousel-angle prev btn btn-circle-dark">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512">
+                                            <path
+                                                d="M192 448c-8.188 0-16.38-3.125-22.62-9.375l-160-160c-12.5-12.5-12.5-32.75 0-45.25l160-160c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25L77.25 256l137.4 137.4c12.5 12.5 12.5 32.75 0 45.25C208.4 444.9 200.2 448 192 448z"
+                                            />
+                                        </svg>
+                                    </span>
+                                    <span class="carousel-angle next btn btn-circle-dark">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512">
+                                            <path
+                                                d="M64 448c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L178.8 256L41.38 118.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l160 160c12.5 12.5 12.5 32.75 0 45.25l-160 160C80.38 444.9 72.19 448 64 448z"
+                                            />
+                                        </svg>
+                                    </span>
+                                </div>
+                            </div>
+                            <script>
+                                const carouselExampleInLightboxBackdrop = new Swiper(
+                                    "#carousel-example-in-lightbox-backdrop .swiper",
+                                    {
+                                        slidesPerView: 1,
+                                        spaceBetween: 10,
+                                        breakpoints: null,
+                                        navigation: {
+                                            nextEl: "#carousel-example-in-lightbox-backdrop .next",
+                                            prevEl: "#carousel-example-in-lightbox-backdrop .prev",
+                                        },
+                                    }
+                                );
+                                window.carouselExampleInLightboxBackdrop = carouselExampleInLightboxBackdrop;
+                            </script>
+                        </div>
+                    </div>
+                    <script src="/src/components/swiper/lightbox/lightbox.js"></script>
+                </div>
+            </section>
+
+            <section id="lightbox-carousel-section">
+                <div class="container">
+                    <h2 class="display-2">lightbox carousel</h2>
+
+                    <div class="lightbox-carousel">
+                        <div class="carousel" id="carousel-example-in-lightbox-carousel">
+                            <div class="swiper">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <img
+                                            data-index="0"
+                                            data-toggle="lightbox-carousel"
+                                            data-target="#carousel-example-in-lightbox-carousel-backdrop"
+                                            src="/src/assets/images/collection/flowers.jpg"
+                                            alt=""
+                                        />
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img
+                                            data-index="1"
+                                            data-toggle="lightbox-carousel"
+                                            data-target="#carousel-example-in-lightbox-carousel-backdrop"
+                                            src="/src/assets/images/rest/vertical.jpg"
+                                            alt=""
+                                        />
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img
+                                            data-index="2"
+                                            data-toggle="lightbox-carousel"
+                                            data-target="#carousel-example-in-lightbox-carousel-backdrop"
+                                            src="/src/assets/images/collection/mountains.jpg"
+                                            alt=""
+                                        />
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img
+                                            data-index="3"
+                                            data-toggle="lightbox-carousel"
+                                            data-target="#carousel-example-in-lightbox-carousel-backdrop"
+                                            src="/src/assets/images/collection/waterfall.jpg"
+                                            alt=""
+                                        />
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img
+                                            data-index="4"
+                                            data-toggle="lightbox-carousel"
+                                            data-target="#carousel-example-in-lightbox-carousel-backdrop"
+                                            src="/src/assets/images/collection/waterfall.jpg"
+                                            alt=""
+                                        />
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="carousel-angles">
+                                <span class="carousel-angle prev btn btn-circle-dark">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512">
+                                        <path
+                                            d="M192 448c-8.188 0-16.38-3.125-22.62-9.375l-160-160c-12.5-12.5-12.5-32.75 0-45.25l160-160c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25L77.25 256l137.4 137.4c12.5 12.5 12.5 32.75 0 45.25C208.4 444.9 200.2 448 192 448z"
+                                        />
+                                    </svg>
+                                </span>
+                                <span class="carousel-angle next btn btn-circle-dark">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512">
+                                        <path
+                                            d="M64 448c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L178.8 256L41.38 118.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l160 160c12.5 12.5 12.5 32.75 0 45.25l-160 160C80.38 444.9 72.19 448 64 448z"
+                                        />
+                                    </svg>
+                                </span>
+                            </div>
+                        </div>
+                        <script>
+                            const carouselExampleInLightboxCarousel = new Swiper(
+                                "#carousel-example-in-lightbox-carousel .swiper",
+                                {
+                                    slidesPerView: 1,
+                                    // slidesPerGroup:4,
+                                    spaceBetween: 10,
+                                    navigation: {
+                                        nextEl: "#carousel-example-in-lightbox-carousel .next",
+                                        prevEl: "#carousel-example-in-lightbox-carousel .prev",
+                                    },
+                                    breakpoints: {
+                                        640: {
+                                            slidesPerView: 2,
+                                        },
+                                        768: {
+                                            slidesPerView: 3,
+                                        },
+                                        992: {
+                                            slidesPerView: 4,
+                                        },
+                                    },
+                                }
+                            );
+                        </script>
+
+                        <!-- keep backdrop to display none in tag itself to avoid focus interactions initially  -->
+                        <div class="backdrop" style="display: none">
+                            <button
+                                class="btn btn-circle-light btn-lg backdrop-closer"
+                                data-dismiss="lightbox-carousel"
+                                data-target="#carousel-example-in-lightbox-carousel-backdrop"
+                            >
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                                    <path
+                                        d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"
+                                    />
+                                </svg>
+                            </button>
+
+                            <!-- carousel data-instance-name should be the same as the Swiper instance name (instanceName = new Swiper)  -->
+                            <div
+                                class="carousel"
+                                id="carousel-example-in-lightbox-carousel-backdrop"
+                                data-instance-name="carouselExampleInLightboxCarouselBackdrop"
+                            >
+                                <div class="swiper">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <img src="/src/assets/images/collection/flowers.jpg" alt="image" />
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="/src/assets/images/rest/vertical.jpg" alt="image" />
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="/src/assets/images/collection/mountains.jpg" alt="image" />
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="/src/assets/images/collection/waterfall.jpg" alt="image" />
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="/src/assets/images/collection/waterfall.jpg" alt="image" />
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="carousel-angles">
+                                    <span class="carousel-angle prev btn btn-circle-dark">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512">
+                                            <path
+                                                d="M192 448c-8.188 0-16.38-3.125-22.62-9.375l-160-160c-12.5-12.5-12.5-32.75 0-45.25l160-160c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25L77.25 256l137.4 137.4c12.5 12.5 12.5 32.75 0 45.25C208.4 444.9 200.2 448 192 448z"
+                                            />
+                                        </svg>
+                                    </span>
+                                    <span class="carousel-angle next btn btn-circle-dark">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512">
+                                            <path
+                                                d="M64 448c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L178.8 256L41.38 118.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l160 160c12.5 12.5 12.5 32.75 0 45.25l-160 160C80.38 444.9 72.19 448 64 448z"
+                                            />
+                                        </svg>
+                                    </span>
+                                </div>
+                            </div>
+                            <script>
+                                const carouselExampleInLightboxCarouselBackdrop = new Swiper(
+                                    "#carousel-example-in-lightbox-carousel-backdrop .swiper",
+                                    {
+                                        slidesPerView: 1,
+                                        spaceBetween: 10,
+                                        breakpoints: null,
+                                        navigation: {
+                                            nextEl: "#carousel-example-in-lightbox-carousel-backdrop .next",
+                                            prevEl: "#carousel-example-in-lightbox-carousel-backdrop .prev",
+                                        },
+                                    }
+                                );
+                                window.carouselExampleInLightboxCarouselBackdrop =
+                                    carouselExampleInLightboxCarouselBackdrop;
+                            </script>
+                        </div>
+                    </div>
+                    <script src="/src/components/swiper/lightbox-carousel/lightbox-carousel.js"></script>
+                </div>
+            </section>
+
+            <section id="thumbnail-carousel-section">
+                <div class="container">
+                    <h2 class="display-2">thumbnail carousel</h2>
+
+                    <div class="thumbnail-carousel">
+                        <!-- FIRST CAROUSEL -->
+                        <div
+                            class="carousel"
+                            id="carousel-example-in-thumbnail-carousel"
+                            data-instance-name="carouselExampleInThumbnailCarousel"
+                        >
+                            <div class="swiper">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <img
+                                            data-index="0"
+                                            data-toggle="thumbnail-carousel"
+                                            data-target="#carousel-example-in-thumbnail-carousel-backdrop"
+                                            src="/src/assets/images/collection/flowers.jpg"
+                                            alt=""
+                                        />
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img
+                                            data-index="1"
+                                            data-toggle="thumbnail-carousel"
+                                            data-target="#carousel-example-in-thumbnail-carousel-backdrop"
+                                            src="/src/assets/images/rest/vertical.jpg"
+                                            alt=""
+                                        />
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img
+                                            data-index="2"
+                                            data-toggle="thumbnail-carousel"
+                                            data-target="#carousel-example-in-thumbnail-carousel-backdrop"
+                                            src="/src/assets/images/collection/mountains.jpg"
+                                            alt=""
+                                        />
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img
+                                            data-index="3"
+                                            data-toggle="thumbnail-carousel"
+                                            data-target="#carousel-example-in-thumbnail-carousel-backdrop"
+                                            src="/src/assets/images/collection/waterfall.jpg"
+                                            alt=""
+                                        />
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img
+                                            data-index="4"
+                                            data-toggle="thumbnail-carousel"
+                                            data-target="#carousel-example-in-thumbnail-carousel-backdrop"
+                                            src="/src/assets/images/collection/waterfall.jpg"
+                                            alt=""
+                                        />
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="carousel-angles">
+                                <span class="carousel-angle prev btn btn-circle-dark">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512">
+                                        <path
+                                            d="M192 448c-8.188 0-16.38-3.125-22.62-9.375l-160-160c-12.5-12.5-12.5-32.75 0-45.25l160-160c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25L77.25 256l137.4 137.4c12.5 12.5 12.5 32.75 0 45.25C208.4 444.9 200.2 448 192 448z"
+                                        />
+                                    </svg>
+                                </span>
+                                <span class="carousel-angle next btn btn-circle-dark">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512">
+                                        <path
+                                            d="M64 448c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L178.8 256L41.38 118.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l160 160c12.5 12.5 12.5 32.75 0 45.25l-160 160C80.38 444.9 72.19 448 64 448z"
+                                        />
+                                    </svg>
+                                </span>
+                            </div>
+                        </div>
+                        <script>
+                            const carouselExampleInThumbnailCarousel = new Swiper(
+                                "#carousel-example-in-thumbnail-carousel .swiper",
+                                {
+                                    slidesPerView: 1,
+                                    // slidesPerGroup:4,
+                                    spaceBetween: 10,
+                                    navigation: {
+                                        nextEl: "#carousel-example-in-thumbnail-carousel .next",
+                                        prevEl: "#carousel-example-in-thumbnail-carousel .prev",
+                                    },
+                                    breakpoints: null,
+                                }
+                            );
+
+                            carouselExampleInThumbnailCarousel.on("slideChange", function (e) {
+                                const firstCarouselInstance = carouselExampleInThumbnailCarousel;
+                                const secondCarouselInstance = carouselExampleInThumbnailCarouselThumbnails;
+                                const secondCarouselId = "#carousel-example-in-thumbnail-carousel-thumbnails";
+
+                                const activeIndex = firstCarouselInstance.activeIndex;
+                                secondCarouselInstance.slideTo(activeIndex);
+
+                                const secondCarousel = document.querySelector(secondCarouselId);
+                                const thumbnails = secondCarousel.querySelectorAll(".swiper img");
+                                const activeThumbnail = secondCarousel.querySelector(".swiper img.active");
+
+                                if (activeThumbnail) activeThumbnail.classList.remove("active");
+                                thumbnails[activeIndex].classList.add("active");
+                            });
+                        </script>
+
+                        <!-- SECOND CAROUSEL -->
+                        <div class="thumbnails">
+                            <div
+                                class="carousel"
+                                id="carousel-example-in-thumbnail-carousel-thumbnails"
+                                data-instance-name="carouselExampleInThumbnailCarouselThumbnails"
+                            >
+                                <div class="swiper">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <img
+                                                class="active"
+                                                data-toggle="thumbnail"
+                                                data-index="0"
+                                                src="/src/assets/images/collection/flowers.jpg"
+                                                alt=""
+                                            />
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img
+                                                data-toggle="thumbnail"
+                                                data-index="1"
+                                                src="/src/assets/images/rest/vertical.jpg"
+                                                alt=""
+                                            />
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img
+                                                data-toggle="thumbnail"
+                                                data-index="2"
+                                                src="/src/assets/images/collection/mountains.jpg"
+                                                alt=""
+                                            />
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img
+                                                data-toggle="thumbnail"
+                                                data-index="3"
+                                                src="/src/assets/images/collection/waterfall.jpg"
+                                                alt=""
+                                            />
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img
+                                                data-toggle="thumbnail"
+                                                data-index="4"
+                                                data-toggle="thumbnail-carousel"
+                                                data-target="#carousel-example-in-thumbnail-carousel-backdrop"
+                                                src="/src/assets/images/collection/waterfall.jpg"
+                                                alt=""
+                                            />
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="carousel-angles">
+                                    <span class="carousel-angle prev btn btn-circle-dark">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512">
+                                            <path
+                                                d="M192 448c-8.188 0-16.38-3.125-22.62-9.375l-160-160c-12.5-12.5-12.5-32.75 0-45.25l160-160c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25L77.25 256l137.4 137.4c12.5 12.5 12.5 32.75 0 45.25C208.4 444.9 200.2 448 192 448z"
+                                            />
+                                        </svg>
+                                    </span>
+                                    <span class="carousel-angle next btn btn-circle-dark">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512">
+                                            <path
+                                                d="M64 448c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L178.8 256L41.38 118.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l160 160c12.5 12.5 12.5 32.75 0 45.25l-160 160C80.38 444.9 72.19 448 64 448z"
+                                            />
+                                        </svg>
+                                    </span>
+                                </div>
+                            </div>
+                            <script>
+                                const carouselExampleInThumbnailCarouselThumbnails = new Swiper(
+                                    "#carousel-example-in-thumbnail-carousel-thumbnails .swiper",
+                                    {
+                                        slidesPerView: "auto",
+                                        // slidesPerGroup:4,
+                                        spaceBetween: 10,
+                                        navigation: {
+                                            nextEl: "#carousel-example-in-thumbnail-carousel-thumbnails .next",
+                                            prevEl: "#carousel-example-in-thumbnail-carousel-thumbnails .prev",
+                                        },
+                                        breakpoints: null,
+                                    }
+                                );
+
+                                carouselExampleInThumbnailCarouselThumbnails.on("click", function (e) {
+                                    const activeIndex = e.clickedIndex;
+                                    const firstCarouselInstance = carouselExampleInThumbnailCarousel;
+                                    firstCarouselInstance.slideTo(activeIndex);
+                                });
+                            </script>
+                        </div>
+
+                        <!-- THIRD CAROUSEL -->
+                        <!-- keep backdrop to display none in tag itself to avoid focus interactions initially  -->
+                        <div class="backdrop" style="display: none">
+                            <button
+                                class="btn btn-circle-light btn-lg backdrop-closer"
+                                data-dismiss="thumbnail-carousel"
+                                data-target="#carousel-example-in-thumbnail-carousel-backdrop"
+                            >
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                                    <path
+                                        d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"
+                                    />
+                                </svg>
+                            </button>
+
+                            <!-- carousel data-instance-name should be the same as the Swiper instance name (instanceName = new Swiper)  -->
+                            <div
+                                class="carousel"
+                                id="carousel-example-in-thumbnail-carousel-backdrop"
+                                data-instance-name="carouselExampleInThumbnailCarouselBackdrop"
+                            >
+                                <div class="swiper">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <img src="/src/assets/images/collection/flowers.jpg" alt="image" />
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="/src/assets/images/rest/vertical.jpg" alt="image" />
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="/src/assets/images/collection/mountains.jpg" alt="image" />
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="/src/assets/images/collection/waterfall.jpg" alt="image" />
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="/src/assets/images/collection/waterfall.jpg" alt="image" />
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="carousel-angles">
+                                    <span class="carousel-angle prev btn btn-circle-dark">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512">
+                                            <path
+                                                d="M192 448c-8.188 0-16.38-3.125-22.62-9.375l-160-160c-12.5-12.5-12.5-32.75 0-45.25l160-160c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25L77.25 256l137.4 137.4c12.5 12.5 12.5 32.75 0 45.25C208.4 444.9 200.2 448 192 448z"
+                                            />
+                                        </svg>
+                                    </span>
+                                    <span class="carousel-angle next btn btn-circle-dark">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512">
+                                            <path
+                                                d="M64 448c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L178.8 256L41.38 118.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l160 160c12.5 12.5 12.5 32.75 0 45.25l-160 160C80.38 444.9 72.19 448 64 448z"
+                                            />
+                                        </svg>
+                                    </span>
+                                </div>
+                            </div>
+                            <script>
+                                const carouselExampleInThumbnailCarouselBackdrop = new Swiper(
+                                    "#carousel-example-in-thumbnail-carousel-backdrop .swiper",
+                                    {
+                                        slidesPerView: 1,
+                                        spaceBetween: 10,
+                                        breakpoints: null,
+                                        navigation: {
+                                            nextEl: "#carousel-example-in-thumbnail-carousel-backdrop .next",
+                                            prevEl: "#carousel-example-in-thumbnail-carousel-backdrop .prev",
+                                        },
+                                    }
+                                );
+                                window.carouselExampleInThumbnailCarouselBackdrop =
+                                    carouselExampleInThumbnailCarouselBackdrop;
+                            </script>
+                        </div>
+                    </div>
+                    <script src="/src/components/swiper/thumbnail-carousel/thumbnail-carousel.js"></script>
+                </div>
+            </section>
+
+            <section id="lazy-carousel-section">
+                <div class="container">
+                    <h2 class="display-2">lazy carousel</h2>
+                    <div class="carousel" id="lazy-carousel-example">
+                        <div class="swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="card carousel-card">
+                                        <h4 class="display-6">title 1</h4>
+                                        <img
+                                            class="swiper-lazy"
+                                            data-src="/src/assets/images/gallery-high-resolution/image-1.jpg"
+                                            alt="image"
+                                        />
+                                        <div class="swiper-lazy-preloader"></div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="card carousel-card">
+                                        <h4 class="display-6">title 2</h4>
+                                        <img
+                                            class="swiper-lazy"
+                                            data-src="/src/assets/images/gallery-high-resolution/image-2.jpg"
+                                            alt="image"
+                                        />
+                                        <div class="swiper-lazy-preloader"></div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="card carousel-card">
+                                        <h4 class="display-6">title 3</h4>
+                                        <img
+                                            class="swiper-lazy"
+                                            data-src="/src/assets/images/gallery-high-resolution/image-3.jpg"
+                                            alt="image"
+                                        />
+                                        <div class="swiper-lazy-preloader"></div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="card carousel-card">
+                                        <h4 class="display-6">title 4</h4>
+                                        <img
+                                            class="swiper-lazy"
+                                            data-src="/src/assets/images/gallery-high-resolution/image-4.jpg"
+                                            alt="image"
+                                        />
+                                        <div class="swiper-lazy-preloader"></div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="card carousel-card">
+                                        <h4 class="display-6">title 5</h4>
+                                        <img
+                                            class="swiper-lazy"
+                                            data-src="/src/assets/images/gallery-high-resolution/image-5.jpg"
+                                            alt="image"
+                                        />
+                                        <div class="swiper-lazy-preloader"></div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="card carousel-card">
+                                        <h4 class="display-6">title 6</h4>
+                                        <img
+                                            class="swiper-lazy"
+                                            data-src="/src/assets/images/gallery-high-resolution/image-6.jpg"
+                                            alt="image"
+                                        />
+                                        <div class="swiper-lazy-preloader"></div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="card carousel-card">
+                                        <h4 class="display-6">title 7</h4>
+                                        <img
+                                            class="swiper-lazy"
+                                            data-src="/src/assets/images/gallery-high-resolution/image-7.jpg"
+                                            alt="image"
+                                        />
+                                        <div class="swiper-lazy-preloader"></div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="card carousel-card">
+                                        <h4 class="display-6">title 8</h4>
+                                        <img
+                                            class="swiper-lazy"
+                                            data-src="/src/assets/images/gallery-high-resolution/image-8.jpg"
+                                            alt="image"
+                                        />
+                                        <div class="swiper-lazy-preloader"></div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="card carousel-card">
+                                        <h4 class="display-6">title 9</h4>
+                                        <img
+                                            class="swiper-lazy"
+                                            data-src="/src/assets/images/gallery-high-resolution/image-9.jpg"
+                                            alt="image"
+                                        />
+                                        <div class="swiper-lazy-preloader"></div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="card carousel-card">
+                                        <h4 class="display-6">title 10</h4>
+                                        <img
+                                            class="swiper-lazy"
+                                            data-src="/src/assets/images/gallery-high-resolution/image-10.jpg"
+                                            alt="image"
+                                        />
+                                        <div class="swiper-lazy-preloader"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- If we need pagination -->
+                            <!-- <div class="swiper-pagination"></div> -->
+
+                            <!-- If we need navigation buttons -->
+
+                            <!-- If we need scrollbar -->
+                            <!-- <div class="swiper-scrollbar"></div> -->
+                        </div>
+
+                        <div class="carousel-angles">
+                            <span class="carousel-angle prev btn btn-circle-dark">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512">
+                                    <path
+                                        d="M192 448c-8.188 0-16.38-3.125-22.62-9.375l-160-160c-12.5-12.5-12.5-32.75 0-45.25l160-160c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25L77.25 256l137.4 137.4c12.5 12.5 12.5 32.75 0 45.25C208.4 444.9 200.2 448 192 448z"
+                                    />
+                                </svg>
+                            </span>
+                            <span class="carousel-angle next btn btn-circle-dark">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512">
+                                    <path
+                                        d="M64 448c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L178.8 256L41.38 118.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l160 160c12.5 12.5 12.5 32.75 0 45.25l-160 160C80.38 444.9 72.19 448 64 448z"
+                                    />
+                                </svg>
+                            </span>
+                        </div>
+                    </div>
+                    <script>
+                        const lazyCarousel = new Swiper("#lazy-carousel-example .swiper", {
+                            lazy: true,
+                            spaceBetween: 10,
+                            navigation: {
+                                nextEl: "#lazy-carousel-example .next",
+                                prevEl: "#lazy-carousel-example .prev",
+                            },
+                            breakpoints: {
+                                640: {
+                                    slidesPerView: 2,
+                                },
+                                768: {
+                                    slidesPerView: 3,
+                                },
+                                992: {
+                                    slidesPerView: 4,
+                                },
+                            },
+                        });
+                    </script>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <div class="container">
+                <h2 class="display-2">footer</h2>
+                <div class="links-group" style="display: inline-flex; align-items: flex-start; flex-direction: column">
+                    <a href="#/" target="_blank" class="link link-secondary"> external link default </a>
+                    <a href="#/" target="_blank" class="link link-primary" underline="hover"> external link hover </a>
+                    <a href="#/" target="_blank" class="link link-success" underline="always"> external link always </a>
+                    <a href="#/" target="_blank" class="link link-danger" underline="none"> external link none </a>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>

@@ -1,0 +1,1 @@
+ - use swiper lightbox instead, this version is backup

@@ -1,0 +1,35 @@
+
+
+.circular-progress-wrapper {
+    position: relative;
+    display: inline-block;
+    .circular-progress {
+        height: 300px;
+        width: 300px;
+        transform: rotate(-90deg);
+        &-count {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            text-align: center;
+        }
+     
+      &-background {
+        fill: none;
+        stroke: #e2eff0;
+        stroke-width: 1.8;
+      }
+      
+      &-bar {
+        fill: none;
+      //   stroke: #e2eff0;
+        stroke: #78bec7;
+        stroke-dasharray: 100 100;
+        stroke-dashoffset: 100;
+        stroke-linecap: round;
+        stroke-width: 1.8;
+        // transition: stroke-dashoffset 1s ease-in-out;
+      }
+    }
+}

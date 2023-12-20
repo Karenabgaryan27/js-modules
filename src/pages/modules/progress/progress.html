@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="/src/styles/index.css" />
+        <script src="https://unpkg.com/axios/dist/axios.min.js" defer></script>
+        <!-- <script src="/src/scripts/page-fade/page-fade.js" defer></script> -->
+        <script src="/src/components/navbar/navbar.js" defer></script>
+        <script src="/src/components/dropdown/dropdown.js" defer></script>
+        <script src="/src/components/collapse/collapse.js" defer></script>
+        <script src="/src/components/drawer/drawer.js" defer></script>
+        <script src="/src/components/select/select.js" defer></script>
+        <script src="/src/components/autocomplete/autocomplete.js" defer></script>
+        <script src="/src/components/progress/progress.js" defer></script>
+        <script src="/src/components/circular-progress-bar/circular-progress-bar.js" defer></script>
+        <script src="/src/components/range-slider/range-slider.js" defer></script>
+        <script src="/src/components/multi-range-slider/multi-range-slider.js" defer></script>
+        <script src="/src/components/button/button.js" defer></script>
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="/index.html">Navbar</a>
+                <button
+                    class="navbar-toggler altCollapsed btn btn-lg btn-circle-light"
+                    type="button"
+                    data-target="#navbar-drawer"
+                    data-toggle="drawer"
+                >
+                    <div class="burger">
+                        <span></span>
+                    </div>
+                </button>
+                <div class="drawer drawer-left" id="navbar-drawer">
+                    <button class="drawer-close btn btn-circle-dark" data-dismiss="drawer">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                            <path
+                                d="M310.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L160 210.7 54.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L114.7 256 9.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 301.3 265.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L205.3 256 310.6 150.6z"
+                            />
+                        </svg>
+                    </button>
+                    <a class="nav-link" href="/index.html">Home</a>
+                    <a class="nav-link" href="/src/pages/about/about.html  ">about</a>
+                    <a class="nav-link" href="/src/pages/products/products.html  ">products</a>
+                </div>
+                <div class="navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="/index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/src/pages/about/about.html  ">about</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/src/pages/products/products.html  ">products</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex">
+                        <div class="search">
+                            <div class="input-group">
+                                <input
+                                    type="text"
+                                    name="search-1"
+                                    id="search-1"
+                                    class="form-control form-control-light"
+                                    placeholder="field"
+                                />
+                                <button class="btn btn-text-light search-toggler">
+                                    <svg
+                                        width="14"
+                                        height="14"
+                                        viewBox="0 0 14 14"
+                                        fill="none"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                        <path
+                                            fill-rule="evenodd"
+                                            clip-rule="evenodd"
+                                            d="M9.68208 10.7458C8.66576 11.5361 7.38866 12.0067 6.00167 12.0067C2.68704 12.0067 0 9.31891 0 6.00335C0 2.68779 2.68704 0 6.00167 0C9.31631 0 12.0033 2.68779 12.0033 6.00335C12.0033 7.39059 11.533 8.66794 10.743 9.6845L13.7799 12.7186C14.0731 13.0115 14.0734 13.4867 13.7806 13.7799C13.4878 14.0731 13.0128 14.0734 12.7196 13.7805L9.68208 10.7458ZM10.5029 6.00335C10.5029 8.49002 8.48765 10.5059 6.00167 10.5059C3.5157 10.5059 1.50042 8.49002 1.50042 6.00335C1.50042 3.51668 3.5157 1.50084 6.00167 1.50084C8.48765 1.50084 10.5029 3.51668 10.5029 6.00335Z"
+                                            fill="#868FA0"
+                                        />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </nav>
+        <header class="hero">
+            <div class="container">
+                <h1 class="hero-title display-1">progress</h1>
+            </div>
+        </header>
+
+        <main class="dropdown-page">
+            <section id="progress-bar">
+                <div class="container">
+                    <h2 class="display-2">progress bar</h2>
+                    <div
+                        class="progress"
+                        data-percentage="90"
+                        data-target="#progress-count1"
+                        style="margin-bottom: 1rem"
+                    >
+                        <div class="progress-bar bg-secondary" style="width: 0%">
+                            <span class="count" id="progress-count1"> 40% </span>
+                        </div>
+                    </div>
+
+                    <br />
+
+                    <!-- <div
+                        class="progress"
+                        id="progress-4"
+                        data-percentage="90"
+                        data-target="#progress-count4"
+                        style="margin-bottom: 1rem"
+                    >
+                        <div class="progress-bar" data-type="multicolor" style="width: 90%">
+                            <span class="count" id="progress-count4"> 90% </span>
+                        </div>
+                    </div>
+                    <div
+                        class="btn btn-secondary"
+                        data-toggle="progress"
+                        data-target="#progress-4"
+                        data-process="decrease"
+                    >
+                        -
+                    </div>
+                    <div
+                        class="btn btn-primary"
+                        data-toggle="progress"
+                        data-target="#progress-4"
+                        data-process="increase"
+                    >
+                        +
+                    </div> -->
+                    <div class="circular-progress-wrapper">
+                        <h2 class="circular-progress-count" id="circular-progress-count1">0%</h2>
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="-1 -1 34 34"
+                            data-progress="90"
+                            data-target="#circular-progress-count1"
+                            class="circular-progress"
+                        >
+                            <circle cx="16" cy="16" r="15.9155" class="circular-progress-background" />
+
+                            <circle cx="16" cy="16" r="15.9155" class="circular-progress-bar" />
+                        </svg>
+                    </div>
+                    <div class="circular-progress-wrapper">
+                        <h2 class="circular-progress-count" id="circular-progress-count2">0%</h2>
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="-1 -1 34 34"
+                            data-progress="47"
+                            data-target="#circular-progress-count2"
+                            class="circular-progress"
+                        >
+                            <circle cx="16" cy="16" r="15.9155" class="circular-progress-background" />
+
+                            <circle cx="16" cy="16" r="15.9155" class="circular-progress-bar" />
+                        </svg>
+                    </div>
+                </div>
+            </section>
+
+            <section id="range-slider">
+                <div class="container">
+                    <h2 class="display-2">range slider</h2>
+                    <div class="range-slider">
+                        <input class="range-slider-range" type="range" value="70" min="0" max="100" />
+                        <span class="range-slider-value">70</span>
+                    </div>
+
+                    <br />
+                    <div class="multi-range-slider">
+                        <input type="range" class="input-left" min="0" max="100" value="25" />
+                        <input type="range" class="input-right" min="0" max="100" value="75" />
+
+                        <div class="slider">
+                            <div class="track"></div>
+                            <div class="range"></div>
+                            <div class="thumb left"></div>
+                            <div class="thumb right"></div>
+                        </div>
+                        <div class="counts-group">
+                            <b class="left-count">0</b>
+                            <b class="right-count">0</b>
+                        </div>
+                    </div>
+                    <br />
+
+                    <div class="multi-range-slider">
+                        <input type="range" class="input-left" min="0" max="100" value="25" />
+                        <input type="range" class="input-right" min="0" max="100" value="50" />
+
+                        <div class="slider">
+                            <div class="track"></div>
+                            <div class="range"></div>
+                            <div class="thumb left"></div>
+                            <div class="thumb right"></div>
+                        </div>
+                        <div class="counts-group">
+                            <b class="left-count">0</b>
+                            <b class="right-count">0</b>
+                        </div>
+                    </div>
+                    <br />
+                    <label class="form-check disabled">
+                        <input type="checkbox" class="form-check-input" />
+                        <div class="btn form-check-btn btn-circle-primary">
+                            <div class="form-check-checkbox"></div>
+                        </div>
+                    </label>
+                    <br />
+                    <label class="form-check">
+                        <input type="checkbox" class="form-check-input" />
+                        <div class="btn form-check-btn btn-circle-primary">
+                            <div class="form-check-checkbox"></div>
+                        </div>
+                    </label>
+                    <br />
+                    <label class="form-check">
+                        <input type="checkbox" class="form-check-input" checked />
+                        <div class="btn form-check-btn btn-circle-danger">
+                            <div class="form-check-checkbox"></div>
+                        </div>
+                    </label>
+                    <br />
+                    <label class="form-check">
+                        <input type="checkbox" class="form-check-input" />
+                        <div class="form-check-btn btn btn-circle-success">
+                            <div class="form-check-checkbox"></div>
+                        </div>
+                        <span class="form-check-label">checkbox input</span>
+                    </label>
+                    <br />
+                    <br />
+
+                    <label class="form-check">
+                        <input type="checkbox" class="form-check-input" />
+                        <div class="wrapper">
+                            <div class="form-check-switch"></div>
+                        </div>
+                    </label>
+                    <br />
+
+                    <label class="form-check">
+                        <input type="checkbox" checked class="form-check-input" />
+                        <div class="wrapper">
+                            <div class="form-check-switch text-danger"></div>
+                        </div>
+                    </label>
+                    <br />
+
+                    <label class="form-check">
+                        <input type="checkbox" class="form-check-input" />
+                        <div class="wrapper">
+                            <div class="form-check-switch text-success"></div>
+                        </div>
+                        <span class="form-check-label">switch checkbox input</span>
+                    </label>
+                    <br />
+                </div>
+            </section>
+
+            <section id="counter-on-scroll">
+                <div class="container">
+                    <h2 class="display-2">counter on scroll</h2>
+                    <div
+                        class="counter-on-scroll-group"
+                        style="display: grid; grid-template-columns: 400px 400px 400px"
+                    >
+                        <div
+                            data-lazy-block
+                            data-callback="CounterOnScrollCallback"
+                            class="counter-on-scroll"
+                            data-percentage="25"
+                            data-target="#counter-on-scroll-count-example"
+                        >
+                            <h2 class="display-2 text-success">
+                                <span class="count" id="counter-on-scroll-count-example"></span>%
+                            </h2>
+                        </div>
+                        <div
+                            data-lazy-block
+                            data-callback="CounterOnScrollCallback"
+                            class="counter-on-scroll"
+                            data-percentage="50"
+                            data-target="#counter-on-scroll-count-example-2"
+                        >
+                            <h2 class="display-2 text-warning">
+                                <span class="count" id="counter-on-scroll-count-example-2"></span>%
+                            </h2>
+                        </div>
+                        <div
+                            data-lazy-block
+                            data-callback="CounterOnScrollCallback"
+                            class="counter-on-scroll"
+                            data-percentage="100"
+                            data-target="#counter-on-scroll-count-example-3"
+                        >
+                            <h2 class="display-2 text-danger">
+                                <span class="count" id="counter-on-scroll-count-example-3"></span>%
+                            </h2>
+                        </div>
+                    </div>
+                </div>
+                <script src="/src/components/counter-on-scroll/counter-on-scroll.js"></script>
+                <script src="/src/scripts/lazy-load/lazy-load.js"></script>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <div class="container">
+                <h2 class="display-2">footer</h2>
+                <div class="links-group" style="display: inline-flex; align-items: flex-start; flex-direction: column">
+                    <a href="#/" target="_blank" class="link link-secondary"> external link default </a>
+                    <a href="#/" target="_blank" class="link link-primary" underline="hover"> external link hover </a>
+                    <a href="#/" target="_blank" class="link link-success" underline="always"> external link always </a>
+                    <a href="#/" target="_blank" class="link link-danger" underline="none"> external link none </a>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>

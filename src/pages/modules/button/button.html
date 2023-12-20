@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="/src/styles/index.css" />
+        <!-- <script src="/src/scripts/page-fade/page-fade.js" defer></script> -->
+        <script src="/src/components/navbar/navbar.js" defer></script>
+        <script src="/src/components/dropdown/dropdown.js" defer></script>
+        <script src="/src/components/collapse/collapse.js" defer></script>
+        <script src="/src/components/drawer/drawer.js" defer></script>
+        <script src="/src/components/button/button.js" defer></script>
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="/index.html">Navbar</a>
+                <button
+                    class="navbar-toggler altCollapsed btn btn-lg btn-circle-light"
+                    type="button"
+                    data-target="#navbar-drawer"
+                    data-toggle="drawer"
+                >
+                    <div class="burger">
+                        <span></span>
+                    </div>
+                </button>
+                 <div class="drawer drawer-left" id="navbar-drawer">
+                    <button
+                        class="drawer-close btn btn-circle-dark"
+                        data-dismiss="drawer"
+                    >
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                            <path
+                                d="M310.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L160 210.7 54.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L114.7 256 9.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 301.3 265.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L205.3 256 310.6 150.6z"
+                            />
+                        </svg>
+                    </button>
+                     <a class="nav-link" href="/index.html">Home</a>
+                    <a class="nav-link" href="/src/pages/about/about.html  ">about</a>
+                    <a class="nav-link" href="/src/pages/products/products.html  ">products</a>
+                </div>
+                <div class="navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="/index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/src/pages/about/about.html  ">about</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/src/pages/products/products.html  ">products</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex">
+                      <div class="search">
+                            <div class="input-group">
+                                <input
+                                    type="text"
+                                    name="search-1"
+                                    id="search-1"
+                                    class="form-control form-control-light"
+                                    placeholder="field"
+                                />
+                                <button class="btn btn-text-light search-toggler">
+                                    <svg
+                                        width="14"
+                                        height="14"
+                                        viewBox="0 0 14 14"
+                                        fill="none"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                        <path
+                                            fill-rule="evenodd"
+                                            clip-rule="evenodd"
+                                            d="M9.68208 10.7458C8.66576 11.5361 7.38866 12.0067 6.00167 12.0067C2.68704 12.0067 0 9.31891 0 6.00335C0 2.68779 2.68704 0 6.00167 0C9.31631 0 12.0033 2.68779 12.0033 6.00335C12.0033 7.39059 11.533 8.66794 10.743 9.6845L13.7799 12.7186C14.0731 13.0115 14.0734 13.4867 13.7806 13.7799C13.4878 14.0731 13.0128 14.0734 12.7196 13.7805L9.68208 10.7458ZM10.5029 6.00335C10.5029 8.49002 8.48765 10.5059 6.00167 10.5059C3.5157 10.5059 1.50042 8.49002 1.50042 6.00335C1.50042 3.51668 3.5157 1.50084 6.00167 1.50084C8.48765 1.50084 10.5029 3.51668 10.5029 6.00335Z"
+                                            fill="#868FA0"
+                                        />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </nav>
+        <header class="hero">
+            <div class="container">
+                <h1 class="hero-title display-1">button</h1>
+            </div>
+        </header>
+
+        <main class="button-page">
+            <section>
+                <div class="container">
+                    <h2 class="display-2">type, color, size</h2>
+                    <div class="btns-group">
+                        <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 10px">
+                            <a class="btn btn-text-secondary btn-sm">secondary</a>
+                            <a class="btn btn-text-primary">primary</a>
+                            <a class="btn btn-text-success btn-lg">success</a>
+                        </div>
+
+                        <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 10px">
+                            <button class="btn btn-outline-secondary btn-sm">secondary</button>
+                            <button class="btn btn-outline-primary">primary</button>
+                            <button class="btn btn-outline-success btn-lg">success</button>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 10px">
+                            <button class="btn btn-secondary btn-sm">secondary</button>
+                            <button class="btn btn-primary">primary</button>
+                            <button class="btn btn-success btn-lg">success</button>
+                        </div>
+
+                        <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 10px">
+                            <button class="btn btn-secondary btn-sm">
+                                secondary
+                                <span class="endIcon"><i class="fa-solid fa-trash"></i></span>
+                            </button>
+                            <button class="btn btn-primary">
+                                primary
+                                <span class="endIcon"><i class="fa-solid fa-trash"></i></span>
+                            </button>
+                            <button class="btn btn-success btn-lg">
+                                success
+                                <span class="endIcon"><i class="fa-solid fa-trash"></i></span>
+                            </button>
+                          
+                        </div>
+
+                        <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 10px">
+                            <button class="btn btn-sm btn-circle-secondary">
+                                <svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-vubbuv" focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="DeleteIcon"><path d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"></path></svg>
+                            </button>
+                            <button class="btn btn-circle-primary"><svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-vubbuv" focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="DeleteIcon"><path d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"></path></svg></button>
+                            <button class="btn btn-lg btn-circle-success">
+                                <svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-vubbuv" focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="DeleteIcon"><path d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"></path></svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <div class="container">
+                <h2 class="display-2">footer</h2>
+<div
+                    class="links-group"
+                    style="display: inline-flex; align-items: flex-start; flex-direction: column"
+                >
+                    <a href="#/" target="_blank" class="link link-secondary"> external link default </a>
+                    <a href="#/" target="_blank" class="link link-primary" underline="hover">
+                        external link hover
+                    </a>
+                    <a href="#/" target="_blank" class="link link-success" underline="always">
+                        external link always
+                    </a>
+                    <a href="#/" target="_blank" class="link link-danger" underline="none"> external link none </a>
+                </div>
+            </div>
+        </footer>
+
+        <script src="https://kit.fontawesome.com/847cadd523.js" crossorigin="anonymous"></script>
+    </body>
+</html>

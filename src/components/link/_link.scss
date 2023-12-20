@@ -1,0 +1,56 @@
+
+.link {
+    &-primary,
+    &-secondary,
+    &-success,
+    &-warning,
+    &-danger,
+    &-dark,
+    &-light {
+        text-decoration-line: underline;
+        &:hover {
+            text-decoration-color: inherit;
+        }
+        &[underline="hover"] {
+            text-decoration-line: none;
+            &:hover {
+                text-decoration-line: underline;
+            }
+        }
+        &[underline="always"] {
+            text-decoration-color: inherit;
+            text-decoration-color: currentColor;
+        }
+        &[underline="none"] {
+            text-decoration-line: none;
+        }
+    }
+    &-primary {
+        color: color(primary);
+        text-decoration-color: color(primary, 0.4);
+    }
+    &-secondary {
+        color: color(secondary);
+        text-decoration-color: color(secondary, 0.4);
+    }
+    &-success {
+        color: color(success);
+        text-decoration-color: color(success, 0.4);
+    }
+    &-warning {
+        color: color(warning);
+        text-decoration-color: color(warning, 0.4);
+    }
+    &-danger {
+        color: color(danger);
+        text-decoration-color: color(danger, 0.4);
+    }
+    &-dark {
+        color: color(dark);
+        text-decoration-color: color(dark, 0.4);
+    }
+    &-light {
+        color: color(light);
+        text-decoration-color: color(light, 0.4);
+    }
+}

@@ -1,0 +1,1 @@
+ - add the lock.js script before modal.js script to remove/add scroll

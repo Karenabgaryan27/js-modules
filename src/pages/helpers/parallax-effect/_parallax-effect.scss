@@ -1,0 +1,69 @@
+// ROTATING CARDS
+.rotating-cards {
+    background-color: #70757a;
+    h2 {
+        color: #fff;
+    }
+}
+.rotating-card-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px;
+    // perspective: 450px;
+    // perspective: 1200px;
+}
+
+
+// JS HOVER CARDS
+.js-hover-cards {
+    background-color: #fff;
+    h2 {
+        color: #000;
+    }
+}
+.js-hover-card-group {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    justify-content: center;
+    grid-gap: 50px;
+}
+
+
+// JS WINDOW CARDS
+.js-window-cards {
+    background-color: #fff;
+    h2 {
+        color: #000;
+    }
+}
+.js-window-card-group {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    justify-content: center;
+    grid-gap: 150px;
+}
+
+
+// JS BIG CARD
+.js-big-cards {
+
+}
+
+
+
+// Tilt CARDS
+.tilt-cards {
+    background-color: #fff;
+    h2 {
+        color: #000;
+    }
+}
+.tilt-card-group {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    justify-content: center;
+    grid-gap: 50px;
+    // perspective: 2000;
+}
+

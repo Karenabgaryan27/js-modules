@@ -1,0 +1,29 @@
+.photo-card-group {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+    grid-gap: 30px;
+    min-height: 600px;
+    margin-bottom: 30px;
+    transition: opacity 0.3s ease;
+
+    &.hidden {
+        opacity: 0;
+    }
+}
+
+.photo-card {
+    &.selected {
+        pointer-events: none;
+    }
+    .card {
+        &-title {
+            
+            display: -webkit-box;
+            width: 100%;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+    }
+}
+

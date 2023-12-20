@@ -1,0 +1,1528 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="/src/styles/index.css" />
+        <script src="https://unpkg.com/axios/dist/axios.min.js" defer></script>
+        <!-- <script src="/src/scripts/page-fade/page-fade.js" defer></script> -->
+        <script src="/src/components/navbar/navbar.js" defer></script>
+        <script src="/src/components/dropdown/dropdown.js" defer></script>
+        <script src="/src/components/select/select.js" defer></script>
+        <script src="/src/components/autocomplete/autocomplete.js" defer></script>
+        <script src="/src/components/collapse/collapse.js" defer></script>
+        <script src="/src/scripts/lock.js" defer></script>
+        <script src="/src/components/modal/modal.js" defer></script>
+        <script src="/src/components/nested-modal/nested-modal.js" defer></script>
+        <script src="/src/components/button/button.js" defer></script>
+        <script src="/src/components/toast/toast.js" defer></script>
+        <script src="/src/components/drawer/drawer.js" defer></script>
+        <script src="/src/components/tabs/tabs.js" defer></script>
+
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+        <script src="/src/scripts/fetch.js"></script>
+
+        <!-- TOASTIFY -->
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css" />
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="/index.html">Navbar</a>
+                <button
+                    class="navbar-toggler altCollapsed btn btn-lg btn-circle-light"
+                    type="button"
+                    data-target="#navbar-drawer"
+                    data-toggle="drawer"
+                >
+                    <div class="burger">
+                        <span></span>
+                    </div>
+                </button>
+                <div class="drawer drawer-left" id="navbar-drawer">
+                    <button class="drawer-close btn btn-circle-dark" data-target="#drawer-right" data-dismiss="drawer">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                            <path
+                                d="M310.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L160 210.7 54.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L114.7 256 9.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 301.3 265.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L205.3 256 310.6 150.6z"
+                            />
+                        </svg>
+                    </button>
+                    <a class="nav-link" href="/index.html">Home</a>
+                    <a class="nav-link" href="/src/pages/about/about.html  ">about</a>
+                    <a class="nav-link" href="/src/pages/products/products.html  ">products</a>
+                </div>
+                <div class="navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="/index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/src/pages/about/about.html  ">about</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/src/pages/products/products.html  ">products</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex">
+                        <div class="search">
+                            <div class="input-group">
+                                <input
+                                    type="text"
+                                    name="search-1"
+                                    id="search-1"
+                                    class="form-control form-control-light"
+                                    placeholder="field"
+                                />
+                                <button class="btn btn-text-light search-toggler">
+                                    <svg
+                                        width="14"
+                                        height="14"
+                                        viewBox="0 0 14 14"
+                                        fill="none"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                        <path
+                                            fill-rule="evenodd"
+                                            clip-rule="evenodd"
+                                            d="M9.68208 10.7458C8.66576 11.5361 7.38866 12.0067 6.00167 12.0067C2.68704 12.0067 0 9.31891 0 6.00335C0 2.68779 2.68704 0 6.00167 0C9.31631 0 12.0033 2.68779 12.0033 6.00335C12.0033 7.39059 11.533 8.66794 10.743 9.6845L13.7799 12.7186C14.0731 13.0115 14.0734 13.4867 13.7806 13.7799C13.4878 14.0731 13.0128 14.0734 12.7196 13.7805L9.68208 10.7458ZM10.5029 6.00335C10.5029 8.49002 8.48765 10.5059 6.00167 10.5059C3.5157 10.5059 1.50042 8.49002 1.50042 6.00335C1.50042 3.51668 3.5157 1.50084 6.00167 1.50084C8.48765 1.50084 10.5029 3.51668 10.5029 6.00335Z"
+                                            fill="#868FA0"
+                                        />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </nav>
+        <header class="hero">
+            <div class="container">
+                <h1 class="hero-title display-1">popup</h1>
+            </div>
+        </header>
+
+        <main class="dropdown-page">
+            <section id="dropdown">
+                <div class="container">
+                    <h2 class="display-2">dropdown</h2>
+                    <div class="dropdown-group" style="display: flex; flex-wrap: wrap; gap: 30px">
+                        <div class="dropdown">
+                            <div
+                                tabindex="0"
+                                class="dropdown-toggle btn btn-primary"
+                                data-toggle="dropdown"
+                                data-outside="true"
+                            >
+                                <div class="dropdown-toggle-title">dropdown 1</div>
+                                <span class="endIcon dropdown-toggle-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                                        <path
+                                            d="M137.4 374.6c12.5 12.5 32.8 12.5 45.3 0l128-128c9.2-9.2 11.9-22.9 6.9-34.9s-16.6-19.8-29.6-19.8L32 192c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9l128 128z"
+                                        />
+                                    </svg>
+                                </span>
+                            </div>
+
+                            <div class="dropdown-menu">
+                                <a href="#/category/item-1" class="dropdown-item" tabindex="-1">
+                                    <div class="dropdown-item-title">item 1</div>
+                                </a>
+                                <a href="#/category/item-2" class="dropdown-item" tabindex="-1">
+                                    <div class="dropdown-item-title">item 2</div>
+                                </a>
+                                <a href="#/category/item-3" class="dropdown-item" tabindex="-1">
+                                    <div class="dropdown-item-title">item 3</div>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="dropdown">
+                            <div
+                                tabindex="0"
+                                class="dropdown-toggle btn btn-outline-primary"
+                                data-toggle="dropdown"
+                                data-outside="true"
+                            >
+                                <div class="dropdown-toggle-title">dropdown 2</div>
+                                <span class="endIcon dropdown-toggle-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                                        <path
+                                            d="M137.4 374.6c12.5 12.5 32.8 12.5 45.3 0l128-128c9.2-9.2 11.9-22.9 6.9-34.9s-16.6-19.8-29.6-19.8L32 192c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9l128 128z"
+                                        />
+                                    </svg>
+                                </span>
+                            </div>
+
+                            <div class="dropdown-menu">
+                                <a href="#/category/item-1" class="dropdown-item" tabindex="-1">
+                                    <div class="dropdown-item-title">item 1</div>
+                                </a>
+                                <a href="#/category/item-2" class="dropdown-item" tabindex="-1">
+                                    <div class="dropdown-item-title">item 2</div>
+                                </a>
+                                <a href="#/category/item-3" class="dropdown-item" tabindex="-1">
+                                    <div class="dropdown-item-title">item 3</div>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="dropdown">
+                            <div tabindex="0" class="dropdown-toggle btn btn-text-primary" data-toggle="dropdown">
+                                <div class="wrapper">
+                                    <div class="dropdown-toggle-title">dropdown 3</div>
+                                    <span class="endIcon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                            <path
+                                                d="M471.6 21.7c-21.9-21.9-57.3-21.9-79.2 0L362.3 51.7l97.9 97.9 30.1-30.1c21.9-21.9 21.9-57.3 0-79.2L471.6 21.7zm-299.2 220c-6.1 6.1-10.8 13.6-13.5 21.9l-29.6 88.8c-2.9 8.6-.6 18.1 5.8 24.6s15.9 8.7 24.6 5.8l88.8-29.6c8.2-2.8 15.7-7.4 21.9-13.5L437.7 172.3 339.7 74.3 172.4 241.7zM96 64C43 64 0 107 0 160V416c0 53 43 96 96 96H352c53 0 96-43 96-96V320c0-17.7-14.3-32-32-32s-32 14.3-32 32v96c0 17.7-14.3 32-32 32H96c-17.7 0-32-14.3-32-32V160c0-17.7 14.3-32 32-32h96c17.7 0 32-14.3 32-32s-14.3-32-32-32H96z"
+                                            />
+                                        </svg>
+                                    </span>
+                                </div>
+                                <span class="endIcon dropdown-toggle-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                                        <path
+                                            d="M137.4 374.6c12.5 12.5 32.8 12.5 45.3 0l128-128c9.2-9.2 11.9-22.9 6.9-34.9s-16.6-19.8-29.6-19.8L32 192c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9l128 128z"
+                                        />
+                                    </svg>
+                                </span>
+                            </div>
+
+                            <div class="dropdown-menu">
+                                <a href="#/category/item-1" class="dropdown-item" tabindex="-1">
+                                    <div class="dropdown-item-title">item 1</div>
+                                    <span class="endIcon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                            <path
+                                                d="M471.6 21.7c-21.9-21.9-57.3-21.9-79.2 0L362.3 51.7l97.9 97.9 30.1-30.1c21.9-21.9 21.9-57.3 0-79.2L471.6 21.7zm-299.2 220c-6.1 6.1-10.8 13.6-13.5 21.9l-29.6 88.8c-2.9 8.6-.6 18.1 5.8 24.6s15.9 8.7 24.6 5.8l88.8-29.6c8.2-2.8 15.7-7.4 21.9-13.5L437.7 172.3 339.7 74.3 172.4 241.7zM96 64C43 64 0 107 0 160V416c0 53 43 96 96 96H352c53 0 96-43 96-96V320c0-17.7-14.3-32-32-32s-32 14.3-32 32v96c0 17.7-14.3 32-32 32H96c-17.7 0-32-14.3-32-32V160c0-17.7 14.3-32 32-32h96c17.7 0 32-14.3 32-32s-14.3-32-32-32H96z"
+                                            />
+                                        </svg>
+                                    </span>
+                                </a>
+                                <a href="#/category/item-2" class="dropdown-item" tabindex="-1">
+                                    <span class="startIcon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                            <path
+                                                d="M471.6 21.7c-21.9-21.9-57.3-21.9-79.2 0L362.3 51.7l97.9 97.9 30.1-30.1c21.9-21.9 21.9-57.3 0-79.2L471.6 21.7zm-299.2 220c-6.1 6.1-10.8 13.6-13.5 21.9l-29.6 88.8c-2.9 8.6-.6 18.1 5.8 24.6s15.9 8.7 24.6 5.8l88.8-29.6c8.2-2.8 15.7-7.4 21.9-13.5L437.7 172.3 339.7 74.3 172.4 241.7zM96 64C43 64 0 107 0 160V416c0 53 43 96 96 96H352c53 0 96-43 96-96V320c0-17.7-14.3-32-32-32s-32 14.3-32 32v96c0 17.7-14.3 32-32 32H96c-17.7 0-32-14.3-32-32V160c0-17.7 14.3-32 32-32h96c17.7 0 32-14.3 32-32s-14.3-32-32-32H96z"
+                                            />
+                                        </svg>
+                                    </span>
+                                    <div class="dropdown-item-title">item 2 the long</div>
+                                </a>
+                                <a href="#/category/item-3" class="dropdown-item" tabindex="-1">
+                                    <div class="dropdown-item-title">item 3</div>
+                                    <span class="endIcon"><img src="/src/assets/images/plant.png" alt="" /></span
+                                ></a>
+                            </div>
+                        </div>
+
+                        <div class="dropdown" id="api-dropdown">
+                            <div
+                                tabindex="0"
+                                class="dropdown-toggle btn btn-secondary"
+                                data-toggle="dropdown"
+                                data-outside="true"
+                            >
+                                <div class="dropdown-toggle-title">Api Dropdown</div>
+                                <span class="endIcon dropdown-toggle-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                                        <path
+                                            d="M137.4 374.6c12.5 12.5 32.8 12.5 45.3 0l128-128c9.2-9.2 11.9-22.9 6.9-34.9s-16.6-19.8-29.6-19.8L32 192c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9l128 128z"
+                                        />
+                                    </svg>
+                                </span>
+                            </div>
+
+                            <div class="dropdown-menu">
+                                <div class="dropdown-item disabled">empty.</div>
+                            </div>
+                        </div>
+
+                        <script>
+                            (function () {
+                                const dropdownMenu = document.querySelector("#api-dropdown .dropdown-menu");
+                                let items = "";
+                                const { getProducts } = Fetch;
+
+                                getProducts((error, data) => {
+                                    if (!data) return;
+                                    data.forEach(({ title, thumbnailUrl, id }, index) => {
+                                        items += `<a href="#/category/item-${id}" class="dropdown-item" tabindex="-1" id="dropdown-item-${id}">
+                                                <span class="startIcon">
+                                                    <img src="${thumbnailUrl}" />
+                                                </span>
+                                                <div class="dropdown-item-title">${title}</div>
+                                             </a>`;
+                                    });
+                                    dropdownMenu.innerHTML = items;
+                                });
+                            })();
+                        </script>
+                    </div>
+                </div>
+            </section>
+
+            <section id="select">
+                <div class="container">
+                    <h2 class="display-2">select</h2>
+                    <div class="select-group" style="display: flex; flex-wrap: wrap; gap: 30px">
+                        <div class="select">
+                            <div
+                                tabindex="0"
+                                class="select-toggle btn btn-primary"
+                                data-toggle="select"
+                                data-outside="true"
+                            >
+                                <div class="wrapper placeholder">
+                                    <div class="select-toggle-title">select 1</div>
+                                </div>
+                                <span class="endIcon select-toggle-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                        <path
+                                            d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"
+                                        />
+                                    </svg>
+                                </span>
+                            </div>
+
+                            <div class="select-menu">
+                                <div class="select-item">
+                                    <div class="select-item-title">item 1</div>
+                                </div>
+                                <div class="select-item"><div class="select-item-title">item 2</div></div>
+                                <div class="select-item"><div class="select-item-title">item 3</div></div>
+                            </div>
+                        </div>
+
+                        <div class="select">
+                            <div
+                                tabindex="0"
+                                class="select-toggle btn btn-outline-primary"
+                                data-toggle="select"
+                                data-outside="true"
+                            >
+                                <div class="wrapper placeholder">
+                                    <div class="select-toggle-title">select 2</div>
+                                </div>
+                                <span class="endIcon select-toggle-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                        <path
+                                            d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"
+                                        />
+                                    </svg>
+                                </span>
+                            </div>
+
+                            <div class="select-menu">
+                                <div class="select-item">
+                                    <div class="select-item-title">item 1</div>
+                                </div>
+                                <div class="select-item">
+                                    <div class="select-item-title">item 2</div>
+                                </div>
+                                <div class="select-item">
+                                    <div class="select-item-title">item 3</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="select">
+                            <div tabindex="0" class="select-toggle btn btn-text-primary" data-toggle="select">
+                                <div class="wrapper placeholder">
+                                    <div class="select-toggle-title">select 3</div>
+                                    <span class="endIcon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                            <path
+                                                d="M471.6 21.7c-21.9-21.9-57.3-21.9-79.2 0L362.3 51.7l97.9 97.9 30.1-30.1c21.9-21.9 21.9-57.3 0-79.2L471.6 21.7zm-299.2 220c-6.1 6.1-10.8 13.6-13.5 21.9l-29.6 88.8c-2.9 8.6-.6 18.1 5.8 24.6s15.9 8.7 24.6 5.8l88.8-29.6c8.2-2.8 15.7-7.4 21.9-13.5L437.7 172.3 339.7 74.3 172.4 241.7zM96 64C43 64 0 107 0 160V416c0 53 43 96 96 96H352c53 0 96-43 96-96V320c0-17.7-14.3-32-32-32s-32 14.3-32 32v96c0 17.7-14.3 32-32 32H96c-17.7 0-32-14.3-32-32V160c0-17.7 14.3-32 32-32h96c17.7 0 32-14.3 32-32s-14.3-32-32-32H96z"
+                                            />
+                                        </svg>
+                                    </span>
+                                </div>
+                                <span class="endIcon select-toggle-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                        <path
+                                            d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"
+                                        />
+                                    </svg>
+                                </span>
+                            </div>
+
+                            <div class="select-menu">
+                                <div class="select-item">
+                                    <div class="select-item-title">item 1</div>
+                                    <span class="endIcon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                            <path
+                                                d="M471.6 21.7c-21.9-21.9-57.3-21.9-79.2 0L362.3 51.7l97.9 97.9 30.1-30.1c21.9-21.9 21.9-57.3 0-79.2L471.6 21.7zm-299.2 220c-6.1 6.1-10.8 13.6-13.5 21.9l-29.6 88.8c-2.9 8.6-.6 18.1 5.8 24.6s15.9 8.7 24.6 5.8l88.8-29.6c8.2-2.8 15.7-7.4 21.9-13.5L437.7 172.3 339.7 74.3 172.4 241.7zM96 64C43 64 0 107 0 160V416c0 53 43 96 96 96H352c53 0 96-43 96-96V320c0-17.7-14.3-32-32-32s-32 14.3-32 32v96c0 17.7-14.3 32-32 32H96c-17.7 0-32-14.3-32-32V160c0-17.7 14.3-32 32-32h96c17.7 0 32-14.3 32-32s-14.3-32-32-32H96z"
+                                            />
+                                        </svg>
+                                    </span>
+                                </div>
+                                <div class="select-item">
+                                    <span class="startIcon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                            <path
+                                                d="M471.6 21.7c-21.9-21.9-57.3-21.9-79.2 0L362.3 51.7l97.9 97.9 30.1-30.1c21.9-21.9 21.9-57.3 0-79.2L471.6 21.7zm-299.2 220c-6.1 6.1-10.8 13.6-13.5 21.9l-29.6 88.8c-2.9 8.6-.6 18.1 5.8 24.6s15.9 8.7 24.6 5.8l88.8-29.6c8.2-2.8 15.7-7.4 21.9-13.5L437.7 172.3 339.7 74.3 172.4 241.7zM96 64C43 64 0 107 0 160V416c0 53 43 96 96 96H352c53 0 96-43 96-96V320c0-17.7-14.3-32-32-32s-32 14.3-32 32v96c0 17.7-14.3 32-32 32H96c-17.7 0-32-14.3-32-32V160c0-17.7 14.3-32 32-32h96c17.7 0 32-14.3 32-32s-14.3-32-32-32H96z"
+                                            />
+                                        </svg>
+                                    </span>
+                                    <div class="select-item-title">item 2 the long</div>
+                                </div>
+                                <div class="select-item">
+                                    <div class="select-item-title">item 3</div>
+                                    <span class="endIcon"><img src="/src/assets/images/plant.png" alt="" /></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="select" id="api-select">
+                            <div
+                                tabindex="0"
+                                class="select-toggle btn btn-secondary"
+                                data-toggle="select"
+                                data-outside="true"
+                            >
+                                <div class="wrapper placeholder">
+                                    <div class="select-toggle-title">Api Dropdown</div>
+                                </div>
+                                <span class="endIcon select-toggle-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                        <path
+                                            d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"
+                                        />
+                                    </svg>
+                                </span>
+                            </div>
+
+                            <div class="select-menu">
+                                <div class="select-item disabled">empty.</div>
+                            </div>
+                        </div>
+
+                        <script>
+                            (function () {
+                                const selectMenu = document.querySelector("#api-select .select-menu");
+                                let items = "";
+                                const { getProducts } = Fetch;
+
+                                getProducts((error, data) => {
+                                    if (!data) return;
+                                    data.forEach(({ title, thumbnailUrl, id }, index) => {
+                                        items += `<div class="select-item" id="select-item-${id}">
+                                                <span class="startIcon">
+                                                    <img src="${thumbnailUrl}" />
+                                                </span>
+                                                <div class="select-item-title">${title}</div>
+                                             </div>`;
+                                    });
+                                    selectMenu.innerHTML = items;
+                                });
+                            })();
+                        </script>
+                    </div>
+
+                    <!-- <div class="select" tabindex="0" style="margin-bottom: 1rem">
+                        <div class="default text">select text</div>
+
+                        <div class="menu collapse">
+                            <div class="item">option 1</div>
+                            <div class="item">option 2</div>
+                            <div class="item">option 3</div>
+                            <div class="item">option 4</div>
+                            <div class="item">Lorem ipsum dolor sit amet consectetur adipisicing elit</div>
+                        </div>
+                    </div>
+                    <div class="select" tabindex="0" style="margin-bottom: 1rem">
+                        <div class="default text">select text</div>
+
+                        <div class="menu collapse">
+                            <div class="item">option 1</div>
+                            <div class="item">option 2</div>
+                            <div class="item">option 3</div>
+                            <div class="item">option 4</div>
+                            <div class="item">Lorem ipsum dolor sit amet consectetur adipisicing elit</div>
+                            <div class="item">option 5</div>
+                            <div class="item">option 6</div>
+                            <div class="item">option 7</div>
+                            <div class="item">option 8</div>
+                            <div class="item">option 9</div>
+                            <div class="item">option 10</div>
+                        </div>
+                    </div>
+                    <div class="select" tabindex="0" style="margin-bottom: 1rem">
+                        <div class="default text">select text</div>
+
+                        <div class="menu collapse"></div>
+                    </div>
+                    <br />
+                    <div class="select" tabindex="0" data-type="request" data-target="name" style="margin-bottom: 1rem">
+                        <div class="default text">select requested text</div>
+
+                        <div class="menu collapse"></div>
+                    </div>
+                    <div
+                        class="select"
+                        tabindex="0"
+                        data-type="request"
+                        data-target="officialName"
+                        style="margin-bottom: 1rem"
+                    >
+                        <div class="default text">select requested text</div>
+
+                        <div class="menu collapse"></div>
+                    </div> -->
+                </div>
+            </section>
+
+            <section id="autocomplete">
+                <div class="container">
+                    <h2 class="display-2">autocomplete</h2>
+                    <div class="select-group" style="display: flex; flex-wrap: wrap; gap: 30px">
+                        <div class="autocomplete">
+                            <div class="autocomplete-toggle-wrapper">
+                                <div
+                                    class="autocomplete-toggle btn btn-primary"
+                                    data-toggle="autocomplete"
+                                    data-outside="true"
+                                >
+                                    <input type="text" class="autocomplete-field" />
+                                    <div class="wrapper placeholder">
+                                        <div class="autocomplete-toggle-title">autocomplete 1</div>
+                                    </div>
+                                    <span class="endIcon autocomplete-toggle-icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                            <path
+                                                d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"
+                                            />
+                                        </svg>
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="autocomplete-menu">
+                                <div class="autocomplete-item">
+                                    <div class="autocomplete-item-title">item 1</div>
+                                </div>
+                                <div class="autocomplete-item">
+                                    <div class="autocomplete-item-title">item 2</div>
+                                </div>
+                                <div class="autocomplete-item">
+                                    <div class="autocomplete-item-title">item 3</div>
+                                </div>
+                                <div class="autocomplete-item disabled">no results found.</div>
+                            </div>
+                        </div>
+
+                        <div class="autocomplete">
+                            <div class="autocomplete-toggle-wrapper">
+                                <div
+                                    class="autocomplete-toggle btn btn-outline-primary"
+                                    data-toggle="autocomplete"
+                                    data-outside="true"
+                                >
+                                    <input type="text" class="autocomplete-field" />
+                                    <div class="wrapper placeholder">
+                                        <div class="autocomplete-toggle-title">autocomplete 2</div>
+                                    </div>
+                                    <span class="endIcon autocomplete-toggle-icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                            <path
+                                                d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"
+                                            />
+                                        </svg>
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="autocomplete-menu">
+                                <div class="autocomplete-item">
+                                    <div class="autocomplete-item-title">item 1</div>
+                                </div>
+                                <div class="autocomplete-item">
+                                    <div class="autocomplete-item-title">item 2</div>
+                                </div>
+                                <div class="autocomplete-item">
+                                    <div class="autocomplete-item-title">item 3</div>
+                                </div>
+                                <div class="autocomplete-item disabled">no results found.</div>
+                            </div>
+                        </div>
+
+                        <div class="autocomplete">
+                            <div class="autocomplete-toggle-wrapper">
+                                <div
+                                    class="autocomplete-toggle btn btn-text-primary"
+                                    data-toggle="autocomplete"
+                                    data-outside="true"
+                                >
+                                    <input type="text" class="autocomplete-field" />
+                                    <div class="wrapper placeholder">
+                                        <div class="autocomplete-toggle-title">autocomplete 3</div>
+                                    </div>
+                                    <span class="endIcon autocomplete-toggle-icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                            <path
+                                                d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"
+                                            />
+                                        </svg>
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="autocomplete-menu">
+                                <div class="autocomplete-item">
+                                    <div class="autocomplete-item-title">item 1</div>
+                                    <span class="endIcon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                            <path
+                                                d="M471.6 21.7c-21.9-21.9-57.3-21.9-79.2 0L362.3 51.7l97.9 97.9 30.1-30.1c21.9-21.9 21.9-57.3 0-79.2L471.6 21.7zm-299.2 220c-6.1 6.1-10.8 13.6-13.5 21.9l-29.6 88.8c-2.9 8.6-.6 18.1 5.8 24.6s15.9 8.7 24.6 5.8l88.8-29.6c8.2-2.8 15.7-7.4 21.9-13.5L437.7 172.3 339.7 74.3 172.4 241.7zM96 64C43 64 0 107 0 160V416c0 53 43 96 96 96H352c53 0 96-43 96-96V320c0-17.7-14.3-32-32-32s-32 14.3-32 32v96c0 17.7-14.3 32-32 32H96c-17.7 0-32-14.3-32-32V160c0-17.7 14.3-32 32-32h96c17.7 0 32-14.3 32-32s-14.3-32-32-32H96z"
+                                            />
+                                        </svg>
+                                    </span>
+                                </div>
+                                <div class="autocomplete-item">
+                                    <span class="startIcon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                            <path
+                                                d="M471.6 21.7c-21.9-21.9-57.3-21.9-79.2 0L362.3 51.7l97.9 97.9 30.1-30.1c21.9-21.9 21.9-57.3 0-79.2L471.6 21.7zm-299.2 220c-6.1 6.1-10.8 13.6-13.5 21.9l-29.6 88.8c-2.9 8.6-.6 18.1 5.8 24.6s15.9 8.7 24.6 5.8l88.8-29.6c8.2-2.8 15.7-7.4 21.9-13.5L437.7 172.3 339.7 74.3 172.4 241.7zM96 64C43 64 0 107 0 160V416c0 53 43 96 96 96H352c53 0 96-43 96-96V320c0-17.7-14.3-32-32-32s-32 14.3-32 32v96c0 17.7-14.3 32-32 32H96c-17.7 0-32-14.3-32-32V160c0-17.7 14.3-32 32-32h96c17.7 0 32-14.3 32-32s-14.3-32-32-32H96z"
+                                            />
+                                        </svg>
+                                    </span>
+                                    <div class="autocomplete-item-title">item 2 the long</div>
+                                </div>
+                                <div class="autocomplete-item">
+                                    <div class="autocomplete-item-title">item 3</div>
+                                    <span class="endIcon"><img src="/src/assets/images/plant.png" alt="" /></span>
+                                </div>
+                                <div class="autocomplete-item disabled">no results found.</div>
+                            </div>
+                        </div>
+
+                        <div class="autocomplete" id="api-autocomplete">
+                            <div class="autocomplete-toggle-wrapper">
+                                <div
+                                    class="autocomplete-toggle btn btn-secondary"
+                                    data-toggle="autocomplete"
+                                    data-outside="true"
+                                >
+                                    <input type="text" class="autocomplete-field" />
+                                    <div class="wrapper placeholder">
+                                        <div class="autocomplete-toggle-title">Api autocomplete</div>
+                                    </div>
+                                    <span class="endIcon autocomplete-toggle-icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                            <path
+                                                d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"
+                                            />
+                                        </svg>
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="autocomplete-menu">
+                                <div class="autocomplete-item disabled">no results found.</div>
+                            </div>
+                        </div>
+                    </div>
+                    <script>
+                        (function () {
+                            const autocompleteMenu = document.querySelector("#api-autocomplete .autocomplete-menu");
+                            let items = '<div class="autocomplete-item disabled">no results found.</div>';
+                            const { getProducts } = Fetch;
+
+                            getProducts((error, data) => {
+                                if (!data) return;
+                                data.forEach(({ title, thumbnailUrl, id }, index) => {
+                                    items += `<div class="autocomplete-item" id="autocomplete-item-${id}">
+                                            <span class="startIcon">
+                                                <img src="${thumbnailUrl}" />
+                                            </span>
+                                            <div class="autocomplete-item-title">${title}</div>
+                                         </div>`;
+                                });
+                                autocompleteMenu.innerHTML = items;
+                            });
+                        })();
+                    </script>
+                    <!-- <div class="select search autocomplete" data-type="autocomplete" style="margin-bottom: 1rem">
+                        <input class="search" autocomplete="off" />
+                        <div class="default text">select text</div>
+
+                        <div class="menu collapse">
+                            <div class="item">option 1</div>
+                            <div class="item">option 2</div>
+                            <div class="item">option 3</div>
+                            <div class="item">option 4</div>
+                            <div class="item">Lorem ipsum dolor sit amet consectetur adipisicing elit</div>
+                            <div class="item">option 5</div>
+                            <div class="item">option 6</div>
+                            <div class="item">option 7</div>
+                            <div class="item">option 8</div>
+                            <div class="item">option 9</div>
+                            <div class="item">option 10</div>
+                        </div>
+                    </div>
+                    <div class="select search autocomplete" data-type="autocomplete" style="margin-bottom: 1rem">
+                        <input class="search" autocomplete="off" type="text" />
+                        <div class="default text">select text</div>
+
+                        <div class="menu collapse">
+                            <div class="item">mexic</div>
+                            <div class="item">america</div>
+                            <div class="item">argentina</div>
+                            <div class="item">algeria</div>
+                            <div class="item">angola</div>
+                            <div class="item">canada</div>
+                            <div class="item">france</div>
+                            <div class="item">Lorem ipsum dolor sit amet consectetur adipisicing elit</div>
+                            <div class="item">option 5</div>
+                            <div class="item">option 6</div>
+                            <div class="item">option 7</div>
+                            <div class="item">option 8</div>
+                            <div class="item">option 9</div>
+                            <div class="item">option 10</div>
+                        </div>
+                    </div>
+                    <div class="select search autocomplete" style="margin-bottom: 1rem" data-type="autocomplete">
+                        <input class="search" autocomplete="off" />
+                        <div class="default text">select text</div>
+
+                        <div class="menu collapse"></div>
+                    </div>
+                    <br />
+                    <div
+                        class="select search autocomplete"
+                        data-type="autocomplete-request"
+                        data-target="name"
+                        style="margin-bottom: 1rem"
+                    >
+                        <input class="search" autocomplete="off" />
+                        <div class="default text">select text</div>
+
+                        <div class="menu collapse"></div>
+                    </div>
+                    <div
+                        class="select search autocomplete"
+                        data-type="autocomplete-request"
+                        data-target="officialName"
+                        style="margin-bottom: 1rem"
+                    >
+                        <input class="search" autocomplete="off" />
+                        <div class="default text">select text</div>
+
+                        <div class="menu collapse"></div>
+                    </div> -->
+                </div>
+            </section>
+
+            <section id="accordion">
+                <div class="container">
+                    <h2 class="display-2">accordion</h2>
+                    <h3>basic</h3>
+                    <div class="accordion" id="accordionExample-2" style="max-width: 700px">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button
+                                    class="accordion-button"
+                                    type="button"
+                                    data-toggle="collapse"
+                                    data-target="#collapseOne"
+                                >
+                                    Accordion Item #1
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse show">
+                                <div class="accordion-body">
+                                    <strong>This is the first item's accordion body.</strong> It is shown by default,
+                                    until the collapse plugin adds the appropriate classes that we use to style each
+                                    element. These classes control the overall appearance, as well as the showing and
+                                    hiding via CSS transitions. You can modify any of this with custom CSS or overriding
+                                    our default variables. It's also worth noting that just about any HTML can go within
+                                    the <code>.accordion-body</code>, though the transition does limit overflow.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button
+                                    class="accordion-button collapsed"
+                                    type="button"
+                                    data-toggle="collapse"
+                                    data-target="#collapseTwo"
+                                >
+                                    Accordion Item #2
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse test">
+                                <div class="accordion-body">
+                                    <strong>This is the first item's accordion body.</strong> It is shown by default,
+                                    until the collapse plugin adds the appropriate classes that we use to style each
+                                    element. These classes control the overall appearance, as well as the showing and
+                                    hiding via CSS transitions. You can modify any of this with custom CSS or overriding
+                                    our default variables. It's also worth noting that just about any HTML can go within
+                                    the <code>.accordion-body</code>, though the transition does limit overflow.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button
+                                    class="accordion-button collapsed"
+                                    type="button"
+                                    data-toggle="collapse"
+                                    data-target="#collapseThree"
+                                >
+                                    Accordion Item #3
+                                </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse">
+                                <div class="accordion-body">
+                                    <strong>This is the first item's accordion body.</strong> It is shown by default,
+                                    until the collapse plugin adds the appropriate classes that we use to style each
+                                    element. These classes control the overall appearance, as well as the showing and
+                                    hiding via CSS transitions. You can modify any of this with custom CSS or overriding
+                                    our default variables. It's also worth noting that just about any HTML can go within
+                                    the <code>.accordion-body</code>, though the transition does limit overflow.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <br />
+                    <br />
+                    <br />
+                    <h3>controlled</h3>
+                    <div class="accordion" id="accordionExample" style="max-width: 700px">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button
+                                    class="accordion-button"
+                                    type="button"
+                                    data-toggle="collapse"
+                                    data-target="#controlledCollapseOne"
+                                >
+                                    Accordion Item #1
+                                </button>
+                            </h2>
+                            <div
+                                id="controlledCollapseOne"
+                                class="accordion-collapse collapse show"
+                                data-parent="#accordionExample"
+                            >
+                                <div class="accordion-body">
+                                    <strong>This is the first item's accordion body.</strong> It is shown by default,
+                                    until the collapse plugin adds the appropriate classes that we use to style each
+                                    element. These classes control the overall appearance, as well as the showing and
+                                    hiding via CSS transitions. You can modify any of
+                                    <p style="margin-top: 30px; padding-bottom: 20px">
+                                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur, modi.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button
+                                    class="accordion-button collapsed"
+                                    type="button"
+                                    data-toggle="collapse"
+                                    data-target="#controlledCollapseTwo"
+                                >
+                                    Accordion Item #2
+                                </button>
+                            </h2>
+                            <div
+                                id="controlledCollapseTwo"
+                                class="accordion-collapse collapse test"
+                                data-parent="#accordionExample"
+                            >
+                                <div class="accordion-body">
+                                    <strong>This is the first item's accordion body.</strong> It is shown by default,
+                                    until the collapse plugin adds the appropriate classes that we use to style each
+                                    element. These classes control the overall appearance, as well as the showing and
+                                    hiding via CSS transitions. You can modify any of this with custom CSS or overriding
+                                    our default variables. It's also worth noting that just about any
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button
+                                    class="accordion-button collapsed"
+                                    type="button"
+                                    data-toggle="collapse"
+                                    data-target="#controlledCollapseThree"
+                                >
+                                    Accordion Item #3
+                                </button>
+                            </h2>
+                            <div
+                                id="controlledCollapseThree"
+                                class="accordion-collapse collapse"
+                                data-parent="#accordionExample"
+                            >
+                                <div class="accordion-body">
+                                    <strong>This is the first item's accordion body.</strong> It is shown by default,
+                                    until the collapse plugin adds the appropriate classes that we use to style each
+                                    element. These classes control the overall appearance, as well as the showing and
+                                    hiding via CSS transitions. You can modify any of this with custom CSS or overriding
+                                    our default variables. It's also worth noting that just about any HTML can go within
+                                    the <code>.accordion-body</code>, though the transition does limit overflow.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="modal">
+                <div class="container">
+                    <h2 class="display-2">modal</h2>
+                    <!-- MODAL -->
+                    <button class="btn btn-primary" data-toggle="modal" data-target="#firstModal">open modal</button>
+                    <button class="btn btn-primary" data-toggle="modal" data-target="#secondModal">
+                        open centered modal
+                    </button>
+                    <button class="btn btn-primary" data-toggle="modal" data-target="#thirdModal">
+                        open full screen modal
+                    </button>
+                    <button class="btn btn-primary" data-toggle="modal" data-target="#modalWithNestedModal">
+                        open modal with nested modal
+                    </button>
+
+                    <div class="modal fade" style="display: none" id="firstModal" tabindex="-1">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Modal</h5>
+                                    <button type="button" class="btn-close btn btn-circle-dark" data-dismiss="modal">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                                            <path
+                                                d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"
+                                            />
+                                        </svg>
+                                    </button>
+                                </div>
+                                <div class="modal-body">...</div>
+                                <div class="modal-footer">
+                                    <button
+                                        type="button"
+                                        class="btn btn-secondary me-2"
+                                        data-dismiss="modal"
+                                        style="margin-right: 10px"
+                                    >
+                                        Close
+                                    </button>
+                                    <button
+                                        type="button"
+                                        class="btn btn-primary"
+                                        data-target="#secondModal"
+                                        data-dismiss="modal"
+                                        data-toggle="modal"
+                                    >
+                                        open centered modal
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="modal fade" style="display: none" id="secondModal" tabindex="-1">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">centered modal</h5>
+                                    <button type="button" class="btn-close btn btn-circle-dark" data-dismiss="modal">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                                            <path
+                                                d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"
+                                            />
+                                        </svg>
+                                    </button>
+                                </div>
+                                <div class="modal-body">...</div>
+                                <div class="modal-footer">
+                                    <button
+                                        type="button"
+                                        class="btn btn-secondary me-2"
+                                        data-dismiss="modal"
+                                        style="margin-right: 10px"
+                                    >
+                                        Close
+                                    </button>
+                                    <button
+                                        type="button"
+                                        class="btn btn-warning"
+                                        data-toggle="modal"
+                                        data-dismiss="modal"
+                                        data-target="#thirdModal"
+                                    >
+                                        open full screen modal
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="modal fade" style="display: none" id="thirdModal" tabindex="-1">
+                        <div class="modal-dialog modal-fullscreen">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">full screen modal</h5>
+                                    <button type="button" class="btn-close btn btn-circle-dark" data-dismiss="modal">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                                            <path
+                                                d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"
+                                            />
+                                        </svg>
+                                    </button>
+                                </div>
+                                <div class="modal-body">...</div>
+                                <div class="modal-footer">
+                                    <button
+                                        type="button"
+                                        class="btn btn-secondary me-2"
+                                        data-dismiss="modal"
+                                        style="margin-right: 10px"
+                                    >
+                                        Close
+                                    </button>
+                                    <button type="button" class="btn btn-success">submit</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="modal fade" style="display: none" id="modalWithNestedModal" tabindex="-1">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">modal with nested modal</h5>
+                                    <button type="button" class="btn-close btn btn-circle-dark" data-dismiss="modal">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                                            <path
+                                                d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"
+                                            />
+                                        </svg>
+                                    </button>
+                                </div>
+                                <div class="modal-body">...</div>
+                                <div class="modal-footer">
+                                    <button
+                                        type="button"
+                                        class="btn btn-secondary me-2"
+                                        data-dismiss="modal"
+                                        style="margin-right: 10px"
+                                    >
+                                        Close
+                                    </button>
+                                    <button
+                                        type="button"
+                                        class="btn btn-success"
+                                        data-toggle="nested-modal"
+                                        data-target="#nestedModal"
+                                    >
+                                        open nested Modal
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="nested-modal fade" style="display: none" id="nestedModal" tabindex="-1">
+                        <div class="nested-modal-dialog modal-dialog-centered">
+                            <div class="nested-modal-content">
+                                <div class="nested-modal-header">
+                                    <h5 class="nested-modal-title" id="exampleModalLabel">nested modal</h5>
+                                    <button
+                                        type="button"
+                                        class="btn-close btn btn-circle-dark"
+                                        data-dismiss="nested-modal"
+                                    >
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                                            <path
+                                                d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"
+                                            />
+                                        </svg>
+                                    </button>
+                                </div>
+                                <div class="nested-modal-body">...</div>
+                                <div class="nested-modal-footer">
+                                    <button
+                                        type="button"
+                                        class="btn btn-secondary me-2"
+                                        data-dismiss="nested-modal"
+                                        style="margin-right: 10px"
+                                    >
+                                        Close
+                                    </button>
+                                    <button type="button" class="btn btn-success">submit</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--  -->
+                </div>
+            </section>
+
+            <section id="drawer">
+                <div class="container">
+                    <h2 class="display-2">drawer</h2>
+
+                    <button class="btn btn-primary" data-target="#drawer-left" data-toggle="drawer">
+                        open left drawer
+                    </button>
+                    <button class="btn btn-primary" data-target="#drawer-right" data-toggle="drawer">
+                        open right drawer
+                    </button>
+                    <button class="btn btn-primary" data-target="#drawer-top" data-toggle="drawer">
+                        open top drawer
+                    </button>
+                    <button class="btn btn-primary" data-target="#drawer-bottom" data-toggle="drawer">
+                        open bottom drawer
+                    </button>
+
+                    <div class="drawer drawer-left" id="drawer-left">
+                        <button class="btn btn-circle-dark drawer-close" data-dismiss="drawer">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                                <path
+                                    d="M310.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L160 210.7 54.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L114.7 256 9.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 301.3 265.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L205.3 256 310.6 150.6z"
+                                />
+                            </svg>
+                        </button>
+                        drawer left
+                    </div>
+                    <div class="drawer drawer-right" id="drawer-right">
+                        <button class="btn btn-circle-dark drawer-close" data-dismiss="drawer">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                                <path
+                                    d="M310.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L160 210.7 54.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L114.7 256 9.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 301.3 265.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L205.3 256 310.6 150.6z"
+                                />
+                            </svg>
+                        </button>
+                        drawer right
+                    </div>
+                    <div class="drawer drawer-top" id="drawer-top">
+                        <button class="btn btn-circle-dark drawer-close" data-dismiss="drawer">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                                <path
+                                    d="M310.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L160 210.7 54.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L114.7 256 9.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 301.3 265.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L205.3 256 310.6 150.6z"
+                                />
+                            </svg>
+                        </button>
+                        drawer top
+                    </div>
+                    <div class="drawer drawer-bottom" id="drawer-bottom">
+                        <button class="btn btn-circle-dark drawer-close" data-dismiss="drawer">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                                <path
+                                    d="M310.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L160 210.7 54.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L114.7 256 9.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 301.3 265.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L205.3 256 310.6 150.6z"
+                                />
+                            </svg>
+                        </button>
+                        drawer top
+                    </div>
+                </div>
+            </section>
+
+            <section id="tabs">
+                <div class="container">
+                    <h2 class="display-2">tabs</h2>
+
+                    <div class="tabs">
+                        <ul class="nav nav-tabs" id="myTab">
+                            <li class="nav-item">
+                                <button
+                                    class="nav-link active btn btn-text-primary"
+                                    id="home-tab"
+                                    data-toggle="tab"
+                                    data-target="#home"
+                                    type="button"
+                                    role="tab"
+                                    aria-controls="home"
+                                    aria-selected="true"
+                                >
+                                    Home
+                                </button>
+                            </li>
+                            <li class="nav-item">
+                                <button
+                                    class="nav-link btn btn-text-primary"
+                                    id="profile-tab"
+                                    data-toggle="tab"
+                                    data-target="#profile"
+                                    type="button"
+                                    role="tab"
+                                    aria-controls="profile"
+                                    aria-selected="false"
+                                >
+                                    Profile
+                                </button>
+                            </li>
+                            <li class="nav-item">
+                                <button
+                                    class="nav-link btn btn-text-primary"
+                                    id="contact-tab"
+                                    data-toggle="tab"
+                                    data-target="#contact"
+                                    type="button"
+                                    role="tab"
+                                    aria-controls="contact"
+                                    aria-selected="false"
+                                >
+                                    Contact
+                                </button>
+                            </li>
+                            <div class="indicator"></div>
+                        </ul>
+                        <div class="tab-content" id="myTabContent">
+                            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora voluptatum recusandae
+                                provident perspiciatis! Pariatur, rem?
+                            </div>
+                            <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, veritatis.
+                            </div>
+                            <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Esse nisi maxime consectetur
+                                sed. Quas explicabo dignissimos sint accusantium inventore alias?
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tabs">
+                        <ul class="nav nav-tabs" id="myTab">
+                            <li class="nav-item">
+                                <button
+                                    class="nav-link btn btn-text-primary"
+                                    id="home-tab"
+                                    data-toggle="tab"
+                                    data-target="#home"
+                                    type="button"
+                                >
+                                    Home
+                                </button>
+                            </li>
+                            <li class="nav-item">
+                                <button
+                                    class="nav-link active btn btn-text-primary"
+                                    id="profile-tab"
+                                    data-toggle="tab"
+                                    data-target="#profile"
+                                    type="button"
+                                >
+                                    Profile
+                                </button>
+                            </li>
+                            <li class="nav-item">
+                                <button
+                                    class="nav-link btn btn-text-primary"
+                                    id="contact-tab"
+                                    data-toggle="tab"
+                                    data-target="#contact"
+                                    type="button"
+                                >
+                                    Contact
+                                </button>
+                            </li>
+                            <div class="indicator"></div>
+                        </ul>
+                        <div class="tab-content" id="myTabContent">
+                            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora voluptatum recusandae
+                                provident perspiciatis! Pariatur, rem?
+                            </div>
+                            <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, veritatis.
+                            </div>
+                            <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Esse nisi maxime consectetur
+                                sed. Quas explicabo dignissimos sint accusantium inventore alias?
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tabs swiper-tabs">
+                        <ul class="nav nav-tabs" id="myTab">
+                            <div class="carousel" id="swiper-in-tabs">
+                                <div class="swiper">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <li class="nav-item">
+                                                <button
+                                                    class="nav-link btn btn-text-primary active"
+                                                    id="home-tab"
+                                                    data-toggle="tab"
+                                                    data-target="#home"
+                                                    type="button"
+                                                >
+                                                    Home
+                                                </button>
+                                            </li>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <li class="nav-item">
+                                                <button
+                                                    class="nav-link btn btn-text-primary"
+                                                    id="profile-tab"
+                                                    data-toggle="tab"
+                                                    data-target="#profile"
+                                                    type="button"
+                                                >
+                                                    Profile
+                                                </button>
+                                            </li>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <li class="nav-item">
+                                                <button
+                                                    class="nav-link btn btn-text-primary"
+                                                    id="contact-tab"
+                                                    data-toggle="tab"
+                                                    data-target="#contact"
+                                                    type="button"
+                                                >
+                                                    Contact
+                                                </button>
+                                            </li>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <li class="nav-item">
+                                                <button
+                                                    class="nav-link btn btn-text-primary"
+                                                    id="contact-tab"
+                                                    data-toggle="tab"
+                                                    data-target="#contact"
+                                                    type="button"
+                                                >
+                                                    Contact
+                                                </button>
+                                            </li>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <li class="nav-item">
+                                                <button
+                                                    class="nav-link btn btn-text-primary"
+                                                    id="contact-tab"
+                                                    data-toggle="tab"
+                                                    data-target="#contact"
+                                                    type="button"
+                                                >
+                                                    Contact
+                                                </button>
+                                            </li>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <li class="nav-item">
+                                                <button
+                                                    class="nav-link btn btn-text-primary"
+                                                    id="contact-tab"
+                                                    data-toggle="tab"
+                                                    data-target="#contact"
+                                                    type="button"
+                                                >
+                                                    Contact
+                                                </button>
+                                            </li>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <li class="nav-item">
+                                                <button
+                                                    class="nav-link btn btn-text-primary"
+                                                    id="contact-tab"
+                                                    data-toggle="tab"
+                                                    data-target="#contact"
+                                                    type="button"
+                                                >
+                                                    Contact
+                                                </button>
+                                            </li>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <li class="nav-item">
+                                                <button
+                                                    class="nav-link btn btn-text-primary"
+                                                    id="contact-tab"
+                                                    data-toggle="tab"
+                                                    data-target="#contact"
+                                                    type="button"
+                                                >
+                                                    Contact
+                                                </button>
+                                            </li>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <li class="nav-item">
+                                                <button
+                                                    class="nav-link btn btn-text-primary"
+                                                    id="contact-tab"
+                                                    data-toggle="tab"
+                                                    data-target="#contact"
+                                                    type="button"
+                                                >
+                                                    Contact
+                                                </button>
+                                            </li>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <li class="nav-item">
+                                                <button
+                                                    class="nav-link btn btn-text-primary"
+                                                    id="contact-tab"
+                                                    data-toggle="tab"
+                                                    data-target="#contact"
+                                                    type="button"
+                                                >
+                                                    Contact
+                                                </button>
+                                            </li>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <li class="nav-item">
+                                                <button
+                                                    class="nav-link btn btn-text-primary"
+                                                    id="contact-tab"
+                                                    data-toggle="tab"
+                                                    data-target="#contact"
+                                                    type="button"
+                                                >
+                                                    Contact
+                                                </button>
+                                            </li>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <li class="nav-item">
+                                                <button
+                                                    class="nav-link btn btn-text-primary"
+                                                    id="contact-tab"
+                                                    data-toggle="tab"
+                                                    data-target="#contact"
+                                                    type="button"
+                                                >
+                                                    Contact
+                                                </button>
+                                            </li>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <li class="nav-item">
+                                                <button
+                                                    class="nav-link btn btn-text-primary"
+                                                    id="contact-tab"
+                                                    data-toggle="tab"
+                                                    data-target="#contact"
+                                                    type="button"
+                                                >
+                                                    Contact
+                                                </button>
+                                            </li>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="carousel-angles">
+                                    <span class="carousel-angle prev btn btn-circle-dark">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512">
+                                            <path
+                                                d="M192 448c-8.188 0-16.38-3.125-22.62-9.375l-160-160c-12.5-12.5-12.5-32.75 0-45.25l160-160c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25L77.25 256l137.4 137.4c12.5 12.5 12.5 32.75 0 45.25C208.4 444.9 200.2 448 192 448z"
+                                            />
+                                        </svg>
+                                    </span>
+                                    <span class="carousel-angle next btn btn-circle-dark">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512">
+                                            <path
+                                                d="M64 448c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L178.8 256L41.38 118.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l160 160c12.5 12.5 12.5 32.75 0 45.25l-160 160C80.38 444.9 72.19 448 64 448z"
+                                            />
+                                        </svg>
+                                    </span>
+                                </div>
+                            </div>
+                        </ul>
+                        <div class="tab-content" id="myTabContent">
+                            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora voluptatum recusandae
+                                provident perspiciatis! Pariatur, rem?
+                            </div>
+                            <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, veritatis.
+                            </div>
+                            <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Esse nisi maxime consectetur
+                                sed. Quas explicabo dignissimos sint accusantium inventore alias?
+                            </div>
+                        </div>
+
+                        <!-- SWIPER -->
+                        <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+                        <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+
+                        <script>
+                            const tabs = new Swiper("#swiper-in-tabs .swiper", {
+                                slidesPerView: "auto",
+                                spaceBetween: 0,
+                                navigation: {
+                                    nextEl: "#swiper-in-tabs .next",
+                                    prevEl: "#swiper-in-tabs .prev",
+                                },
+                                breakpoints: null,
+                            });
+                        </script>
+                    </div>
+                </div>
+            </section>
+
+            <section id="toastify">
+                <div class="container">
+                    <h2 class="display-2">toastify library</h2>
+                    <button class="btn btn-primary" onclick="Toastify(options).showToast()">show toast</button>
+                </div>
+            </section>
+
+            <section id="toast">
+                <div class="container">
+                    <h2 class="display-2">toast</h2>
+                    <button class="btn btn-primary" data-toggle="toast">show toast</button>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <div class="container">
+                <h2 class="display-2">footer</h2>
+                <div class="links-group" style="display: inline-flex; align-items: flex-start; flex-direction: column">
+                    <a href="#/" target="_blank" class="link link-secondary"> external link default </a>
+                    <a href="#/" target="_blank" class="link link-primary" underline="hover"> external link hover </a>
+                    <a href="#/" target="_blank" class="link link-success" underline="always"> external link always </a>
+                    <a href="#/" target="_blank" class="link link-danger" underline="none"> external link none </a>
+                </div>
+            </div>
+        </footer>
+
+        <!-- TOASTIFY -->
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+        <script>
+            const options = {
+                text: "This is a toast",
+                duration: 3000,
+                destination: "https://github.com/apvarun/toastify-js",
+                newWindow: true,
+                close: true,
+                gravity: "top", // `top` or `bottom`
+                position: "left", // `left`, `center` or `right`
+                stopOnFocus: true, // Prevents dismissing of toast on hover
+                style: {
+                    // background: "linear-gradient(to right, #00b09b, #96c93d)",
+                },
+                // offset: {
+                //     x: 50, // horizontal axis - can be a number or a string indicating unity. eg: '2em'
+                //     y: 10, // vertical axis - can be a number or a string indicating unity. eg: '2em'
+                // },
+                onClick: function () {}, // Callback after click
+            };
+        </script>
+    </body>
+</html>

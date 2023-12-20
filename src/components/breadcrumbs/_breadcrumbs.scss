@@ -1,0 +1,39 @@
+.breadcrumbs {
+    color: rgba(0, 0, 0, 0.6);
+    font-family: Roboto,"Poppins";
+    text-align: left;
+    &-item {
+        display: inline-block;
+        &:not(:last-of-type):after {
+            content: '/';
+            margin: 0 5px;
+            color: inherit;
+            font-family: inherit;
+        }
+    }
+    &-link {
+        color: inherit;
+        font-weight: 400;
+        font-family:inherit;
+        font-size: 1rem;
+        letter-spacing: 0.00938em;
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        &:hover {
+            text-decoration: underline;
+        }
+        &-active {
+            color: rgba(0, 0, 0, 0.87);
+            text-decoration: none !important;
+        }
+        svg {
+            user-select: none;
+            width: 0.8em;
+            height: 0.8em;
+            object-fit: contain;
+            fill: currentColor;
+            margin-right: 4px;
+        }
+    }
+}

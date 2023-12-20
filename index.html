@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Sample</title>
+        <link rel="icon" href="/src/assets/images/icons/favicon.png" />
+        <meta name="keywords" content="website, template, sample" />
+        <meta name="description" content="this sample created for prototyping purposes" />
+        <meta name="author" content="Fiverr: karen_werner | LinkedIn https://www.linkedin.com/in/karenabgaryan09/" />
+        <!-- OPEN GRAPH -->
+        <meta property="og:title" content="Sample" />
+        <meta property="og:type" content="website" />
+        <meta property="og:description" content="this sample created for prototyping purposes" />
+        <meta property="og:image" content="/src/assets/images/og.png" />
+        <meta property="og:url" content="https://sample.com" />
+        <!-- TWITTER CARDS -->
+        <meta name="twitter:title" content="Sample" />
+        <meta name="twitter:description" content="this sample created for prototyping purposes" />
+        <meta name="twitter:image" content="/src/assets/images/og.png" />
+        <meta name="twitter:url" content="https://sample.com" />
+        <meta name="twitter:card" content="summary" />
+        <!-- STYLESHEETS -->
+        <link rel="stylesheet" href="/src/styles/index.css" />
+        <!-- CDN -->
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+        <!-- SCRIPTS -->
+        <!-- <script src="/src/scripts/page-fade/page-fade.js" defer></script> -->
+        <script src="/src/constants/constants.js" defer></script>
+        <script src="/src/scripts/load-cover.js" defer></script>
+        <script src="/src/scripts/script.js" defer></script>
+        <script src="/src/scripts/lazy-load/lazy-load.js" defer></script>
+        <script src="/src/scripts/fetch.js"></script>
+        <script src="/src/components/button/button.js" defer></script>
+        <script src="/src/components/navbar/navbar.js" defer></script>
+        <script src="/src/components/dropdown/dropdown.js" defer></script>
+        <script src="/src/components/drawer/drawer.js" defer></script>
+        <script src="/src/components/collapse/collapse.js" defer></script>
+        <!-- SWIPER -->
+        <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+        <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    </head>
+    <body>
+        <!-- NAVBAR -->
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="/index.html">Navbar</a>
+                <button
+                    class="navbar-toggler altCollapsed btn btn-lg btn-circle-light"
+                    type="button"
+                    data-target="#navbar-drawer"
+                    data-toggle="drawer"
+                >
+                    <div class="burger">
+                        <span></span>
+                    </div>
+                </button>
+                <div class="drawer drawer-left" id="navbar-drawer">
+                    <button class="drawer-close btn btn-circle-dark" data-dismiss="drawer">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                            <path
+                                d="M310.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L160 210.7 54.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L114.7 256 9.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 301.3 265.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L205.3 256 310.6 150.6z"
+                            />
+                        </svg>
+                    </button>
+                    <a class="nav-link active" href="/index.html">Home</a>
+                    <a class="nav-link" href="/src/pages/about/about.html">about</a>
+                    <a class="nav-link" href="/src/pages/products/products.html">products</a>
+                    <div class="accordion" id="navbar-accordion">
+                        <div class="accordion-item">
+                            <button class="accordion-button collapsed" data-toggle="collapse" data-target="#navbar-collpase-1">
+                                modules
+                            </button>
+                            <div
+                                id="navbar-collpase-1"
+                                data-parent="#navbar-accordion"
+                                class="accordion-collapse collapse"
+                            >
+                                <a href="/src/pages/modules/button/button.html" class="nav-link">button</a>
+                                <a href="/src/pages/modules/commponents/commponents.html" class="nav-link"
+                                    >commponents</a
+                                >
+                                <a href="/src/pages/modules/popup/popup.html" class="nav-link">popup</a>
+                                <a href="/src/pages/modules/form/form.html" class="nav-link">form</a>
+                                <a href="/src/pages/modules/progress/progress.html" class="nav-link">progress</a>
+                                <a href="/src/pages/modules/carousel/carousel.html" class="nav-link">carousel</a>
+                                <a href="/src/pages/modules/pagination/pagination.html" class="nav-link">pagination</a>
+                                <a href="/src/pages/modules/drag-and-drop/drag-and-drop.html" class="nav-link"
+                                    >drag and drop</a
+                                >
+                                <a href="/src/pages/modules/chat/chat.html" class="nav-link">chat</a>
+                                <a class="nav-link" href="/src/pages/modules/rest/rest.html">rest</a>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <button class="accordion-button collapsed" data-toggle="collapse" data-target="#navbar-collapse-2">
+                                helpers
+                            </button>
+                            <div
+                                id="navbar-collapse-2"
+                                data-parent="#navbar-accordion"
+                                class="accordion-collapse collapse"
+                            >
+                                <a href="/src/pages/helpers/send-email/send-email.html" class="nav-link"
+                                    >send, receive email</a
+                                >
+                                <a href="/src/pages/helpers/lazy-load/lazy-load.html" class="nav-link">lazy load</a>
+                                <a href="/src/pages/helpers/parallax-scroll/parallax-scroll.html" class="nav-link"
+                                    >parallax scroll</a
+                                >
+                                <a href="/src/pages/helpers/parallax-effect/parallax-effect.html" class="nav-link"
+                                    >parallax effect</a
+                                >
+                                <a href="/src/pages/helpers/responsivness/responsivness.html" class="nav-link"
+                                    >responsivness</a
+                                >
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="/index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/src/pages/about/about.html  ">about</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/src/pages/products/products.html  ">products</a>
+                        </li>
+                        <div class="nav-item dropdown">
+                            <button class="dropdown-toggle btn btn-text-primary" data-toggle="dropdown" data-outside="true">
+                                <div class="dropdown-toggle-title">modules</div>
+                                <span class="endIcon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                                        <path
+                                            d="M137.4 374.6c12.5 12.5 32.8 12.5 45.3 0l128-128c9.2-9.2 11.9-22.9 6.9-34.9s-16.6-19.8-29.6-19.8L32 192c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9l128 128z"
+                                        />
+                                    </svg>
+                                </span>
+                            </button>
+
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" tabindex="-1" href="/src/pages/modules/button/button.html">button</a>
+
+                                <a class="dropdown-item" tabindex="-1" href="/src/pages/modules/popup/popup.html">popup</a>
+
+                                <a class="dropdown-item" tabindex="-1" href="/src/pages/modules/form/form.html">form</a>
+
+                                <a class="dropdown-item" tabindex="-1" href="/src/pages/modules/progress/progress.html">progress</a>
+
+                                <a class="dropdown-item" tabindex="-1" href="/src/pages/modules/carousel/carousel.html">carousel</a>
+
+                                <a class="dropdown-item" tabindex="-1" href="/src/pages/modules/pagination/pagination.html"
+                                    >pagination</a
+                                >
+                                <a class="dropdown-item" tabindex="-1" href="/src/pages/modules/drag-and-drop/drag-and-drop.html"
+                                    >drag and drop</a
+                                >
+                                <a class="dropdown-item" tabindex="-1" href="/src/pages/modules/chat/chat.html">chat</a>
+                                <a class="dropdown-item" tabindex="-1" href="/src/pages/modules/rest/rest.html">rest</a>
+                            </div>
+                        </div>
+                        <div class="nav-item dropdown">
+                            <button class="dropdown-toggle btn btn-text-primary" data-toggle="dropdown" data-outside="true">
+                                <div class="dropdown-toggle-title">helpers</div>
+                                <span class="endIcon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                                        <path
+                                            d="M137.4 374.6c12.5 12.5 32.8 12.5 45.3 0l128-128c9.2-9.2 11.9-22.9 6.9-34.9s-16.6-19.8-29.6-19.8L32 192c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9l128 128z"
+                                        />
+                                    </svg>
+                                </span>
+                            </button>
+
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" tabindex="-1" href="/src/pages/helpers/send-email/send-email.html"
+                                    >send, receive email</a
+                                >
+
+                                <a class="dropdown-item" tabindex="-1" href="/src/pages/helpers/lazy-load/lazy-load.html"
+                                    >lazy load</a
+                                >
+
+                                <a class="dropdown-item" tabindex="-1" href="/src/pages/helpers/parallax-scroll/parallax-scroll.html"
+                                    >parallax scroll</a
+                                >
+
+                                <a class="dropdown-item" tabindex="-1" href="/src/pages/helpers/parallax-effect/parallax-effect.html"
+                                    >parallax effect</a
+                                >
+
+                                <a class="dropdown-item" tabindex="-1" href="/src/pages/helpers/responsivness/responsivness.html"
+                                    >responsivness</a
+                                >
+                            </div>
+                        </div>
+                    </ul>
+                    <form class="d-flex">
+                        <div class="search">
+                            <div class="input-group">
+                                <input
+                                    type="text"
+                                    name="search-1"
+                                    id="search-1"
+                                    class="form-control form-control-light"
+                                    placeholder="field"
+                                />
+                                <button class="btn btn-text-light search-toggler">
+                                    <svg
+                                        width="14"
+                                        height="14"
+                                        viewBox="0 0 14 14"
+                                        fill="none"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                        <path
+                                            fill-rule="evenodd"
+                                            clip-rule="evenodd"
+                                            d="M9.68208 10.7458C8.66576 11.5361 7.38866 12.0067 6.00167 12.0067C2.68704 12.0067 0 9.31891 0 6.00335C0 2.68779 2.68704 0 6.00167 0C9.31631 0 12.0033 2.68779 12.0033 6.00335C12.0033 7.39059 11.533 8.66794 10.743 9.6845L13.7799 12.7186C14.0731 13.0115 14.0734 13.4867 13.7806 13.7799C13.4878 14.0731 13.0128 14.0734 12.7196 13.7805L9.68208 10.7458ZM10.5029 6.00335C10.5029 8.49002 8.48765 10.5059 6.00167 10.5059C3.5157 10.5059 1.50042 8.49002 1.50042 6.00335C1.50042 3.51668 3.5157 1.50084 6.00167 1.50084C8.48765 1.50084 10.5029 3.51668 10.5029 6.00335Z"
+                                            fill="#868FA0"
+                                        />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </nav>
+        <header
+            class="hero"
+            data-cover-src="/src/assets/images/background.jpg"
+            style="background-image: url('/src/assets/images/background-thumbnail.jpg')"
+        >
+            <div class="container">
+                <h1 class="hero-title display-1">home</h1>
+            </div>
+        </header>
+
+        <main class="home-page">
+            <section class="about" data-lazy-block>
+                <div class="container">
+                    <h2 data-lazy="fade" class="about-title display-2">about title</h2>
+                    <p class="about-description mb-5">
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Architecto officiis eaque, sapiente
+                        quasi facere, exercitationem ipsam voluptate repudiandae a magnam praesentium sit rem pariatur
+                        ad ullam sunt ipsa. Adipisci blanditiis voluptas minima tenetur rerum debitis quo velit
+                        consequuntur earum reprehenderit!
+                    </p>
+
+                    <a href="/src/pages/about/about.html" class="btn btn-primary mt-5">
+                        go to about page
+                        <span class="endIcon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                                <path
+                                    d="M96 480c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L242.8 256L73.38 86.63c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l192 192c12.5 12.5 12.5 32.75 0 45.25l-192 192C112.4 476.9 104.2 480 96 480z"
+                                />
+                            </svg>
+                        </span>
+                    </a>
+                </div>
+            </section>
+            <section class="products" data-lazy-block>
+                <div class="container">
+                    <h2 data-lazy="fade" class="products-title display-2">products</h2>
+                    <p class="products-description mb-5">
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Architecto officiis eaque, sapiente
+                        quasi facere, exercitationem ipsam voluptate repudiandae a magnam praesentium sit rem pariatur
+                        ad ullam sunt ipsa. Adipisci blanditiis voluptas minima tenetur rerum debitis quo velit
+                        consequuntur earum reprehenderit!
+                    </p>
+
+                    <div class="carousel" id="home-page-products">
+                        <div class="swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="card product-card">
+                                        <div class="card-header" data-lazy="fade-up">
+                                            <img data-src=/src/assets/images/collection/flowers.jpg
+                                            src=/src/assets/images/icons/preloader.gif class="card-img" alt='fdfd' />
+                                        </div>
+                                        <div class="card-body">
+                                            <h4 class="card-title">unset</h4>
+                                            <p class="card-price">$9999.9</p>
+                                            <button class="btn btn-primary d-block rounded-pill">add to cart</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="carousel-angles">
+                            <span class="carousel-angle prev btn btn-circle-dark">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512">
+                                    <path
+                                        d="M192 448c-8.188 0-16.38-3.125-22.62-9.375l-160-160c-12.5-12.5-12.5-32.75 0-45.25l160-160c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25L77.25 256l137.4 137.4c12.5 12.5 12.5 32.75 0 45.25C208.4 444.9 200.2 448 192 448z"
+                                    />
+                                </svg>
+                            </span>
+                            <span class="carousel-angle next btn btn-circle-dark">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512">
+                                    <path
+                                        d="M64 448c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L178.8 256L41.38 118.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l160 160c12.5 12.5 12.5 32.75 0 45.25l-160 160C80.38 444.9 72.19 448 64 448z"
+                                    />
+                                </svg>
+                            </span>
+                        </div>
+                    </div>
+
+                    <script>
+                        const homePageProducts = new Swiper("#home-page-products .swiper", {
+                            slidesPerView: 1,
+                            // slidesPerGroup:4,
+                            spaceBetween: 30,
+                            navigation: {
+                                nextEl: "#home-page-products .next",
+                                prevEl: "#home-page-products .prev",
+                            },
+                            breakpoints: {
+                                640: {
+                                    slidesPerView: 2,
+                                },
+                                768: {
+                                    slidesPerView: 3,
+                                },
+                                992: {
+                                    slidesPerView: 4,
+                                },
+                            },
+                        });
+
+                        const HomePageProducts = (function () {
+                            const productsWrapper = document.querySelector("#home-page-products .swiper-wrapper");
+                            let products = "";
+
+                            const { getProducts } = Fetch;
+
+                            getProducts((error, data) => {
+                                if (!data) return;
+                                data.forEach((product) => {
+                                    const { title, id, thumbnailUrl } = product;
+                                    products += `
+                                     <div  class="swiper-slide">
+                                         <div class="card product-card">
+                                             <a href="/src/pages/product/product.html?productId=${id}" class="card-header" data-lazy="fade-up">
+                                                 <img data-src=${thumbnailUrl}
+                                                 src=/src/assets/images/icons/preloader.gif class="card-img" alt='${title}' />
+                                             </a>
+                                             <div class="card-body">
+                                                 <h4 class="card-title">${title}</h4>
+                                                 <p class="card-price">${id}</p>
+                                                 <button class="btn btn-primary d-block rounded-pill">add to cart</button>
+                                             </div>
+                                         </div>
+                                     </div>
+                                     `;
+                                });
+                                productsWrapper.innerHTML = products;
+                                LazyLoad.createObserver();
+                            });
+                        })();
+                    </script>
+
+                    <a href="/src/pages/products/products.html" class="btn btn-primary" style="margin-top: 100px">
+                        go to products page
+                        <span class="endIcon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                                <path
+                                    d="M96 480c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L242.8 256L73.38 86.63c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l192 192c12.5 12.5 12.5 32.75 0 45.25l-192 192C112.4 476.9 104.2 480 96 480z"
+                                />
+                            </svg>
+                        </span>
+                    </a>
+                </div>
+            </section>
+            <a href="/src/pages/error/error.html" class="btn btn-danger mt-5"
+                >go to error page
+
+                <span class="endIcon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512">
+                        <path
+                            d="M64 448c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L178.8 256L41.38 118.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l160 160c12.5 12.5 12.5 32.75 0 45.25l-160 160C80.38 444.9 72.19 448 64 448z"
+                        />
+                    </svg>
+                </span>
+            </a>
+        </main>
+
+        <footer class="footer">
+            <div class="container">
+                <h2 class="display-2">footer</h2>
+                <div class="links-group" style="display: inline-flex; align-items: flex-start; flex-direction: column">
+                    <a href="#/" target="_blank" class="link link-secondary"> external link default </a>
+                    <a href="#/" target="_blank" class="link link-primary" underline="hover"> external link hover </a>
+                    <a href="#/" target="_blank" class="link link-success" underline="always"> external link always </a>
+                    <a href="#/" target="_blank" class="link link-danger" underline="none"> external link none </a>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>

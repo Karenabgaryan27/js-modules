@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="/src/styles/index.css" />
+        <!-- <script src="/src/scripts/page-fade/page-fade.js" defer></script> -->
+        <script src="/src/components/navbar/navbar.js" defer></script>
+        <script src="/src/components/dropdown/dropdown.js" defer></script>
+        <script src="/src/components/collapse/collapse.js" defer></script>
+        <script src="/src/components/drawer/drawer.js" defer></script>
+        <script src="/src/components/button/button.js" defer></script>
+        <script src="/src/scripts/validation/integrated-validation/integrated-validation.js" defer></script>
+        <script src="/src/scripts/validation/joi-validation/joi-validation.js" defer></script>
+
+        <script src="/src/scripts/script.js" defer></script>
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="/index.html">Navbar</a>
+                <button
+                    class="navbar-toggler altCollapsed btn btn-lg btn-circle-light"
+                    type="button"
+                    data-target="#navbar-drawer"
+                    data-toggle="drawer"
+                >
+                    <div class="burger">
+                        <span></span>
+                    </div>
+                </button>
+                <div class="drawer drawer-left" id="navbar-drawer">
+                    <button class="drawer-close btn btn-circle-dark" data-dismiss="drawer">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                            <path
+                                d="M310.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L160 210.7 54.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L114.7 256 9.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 301.3 265.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L205.3 256 310.6 150.6z"
+                            />
+                        </svg>
+                    </button>
+                    <a class="nav-link" href="/index.html">Home</a>
+                    <a class="nav-link" href="/src/pages/about/about.html  ">about</a>
+                    <a class="nav-link" href="/src/pages/products/products.html  ">products</a>
+                </div>
+                <div class="navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="/index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/src/pages/about/about.html  ">about</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/src/pages/products/products.html  ">products</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex">
+                        <div class="search">
+                            <div class="input-group">
+                                <input
+                                    type="text"
+                                    name="search-1"
+                                    id="search-1"
+                                    class="form-control form-control-light"
+                                    placeholder="field"
+                                />
+                                <button class="btn btn-text-light search-toggler">
+                                    <svg
+                                        width="14"
+                                        height="14"
+                                        viewBox="0 0 14 14"
+                                        fill="none"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                        <path
+                                            fill-rule="evenodd"
+                                            clip-rule="evenodd"
+                                            d="M9.68208 10.7458C8.66576 11.5361 7.38866 12.0067 6.00167 12.0067C2.68704 12.0067 0 9.31891 0 6.00335C0 2.68779 2.68704 0 6.00167 0C9.31631 0 12.0033 2.68779 12.0033 6.00335C12.0033 7.39059 11.533 8.66794 10.743 9.6845L13.7799 12.7186C14.0731 13.0115 14.0734 13.4867 13.7806 13.7799C13.4878 14.0731 13.0128 14.0734 12.7196 13.7805L9.68208 10.7458ZM10.5029 6.00335C10.5029 8.49002 8.48765 10.5059 6.00167 10.5059C3.5157 10.5059 1.50042 8.49002 1.50042 6.00335C1.50042 3.51668 3.5157 1.50084 6.00167 1.50084C8.48765 1.50084 10.5029 3.51668 10.5029 6.00335Z"
+                                            fill="#868FA0"
+                                        />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </nav>
+        <header class="hero">
+            <div class="container">
+                <h1 class="hero-title display-1">form</h1>
+            </div>
+        </header>
+
+        <main class="form-page">
+            <section id="text-field">
+                <div class="container">
+                    <h2 class="display-2">text field</h2>
+                    <br />
+
+                    <h3 class="display-5 text-secondary">fields</h3>
+                    <br />
+
+                    <!-- basic -->
+                    <input type="text" name="name" id="name" class="form-control form-control-secondary" />
+                    <br />
+
+                    <!-- with label -->
+                    <div class="field">
+                        <label class="form-label" for="name-2">width label</label>
+                        <input type="text" name="name-2" id="name-2" class="form-control form-control-secondary" />
+                    </div>
+                    <br />
+
+                    <!-- with label and feedbacks -->
+                    <div class="field">
+                        <label class="form-label" for="name-3"> with label and feedbacks </label>
+                        <div class="input-group">
+                            <input
+                                type="text"
+                                name="name-3"
+                                id="name-3"
+                                class="form-control form-control-secondary"
+                                required
+                            />
+                            <div class="valid-feedback">looks good.</div>
+                            <div class="invalid-feedback">name error.</div>
+                        </div>
+                    </div>
+                    <br />
+
+                    <!-- with label and placeholder -->
+                    <div class="field">
+                        <label class="form-label" for="name-4"> with label and placeholder </label>
+                        <div class="input-group">
+                            <input
+                                type="text"
+                                name="name-4"
+                                id="name-4"
+                                class="form-control form-control-secondary"
+                                placeholder="placeholder"
+                                required
+                            />
+                        </div>
+                    </div>
+                    <br />
+                    <br />
+                    <br />
+
+                    <h3 class="display-5 text-secondary">field buttons</h3>
+                    <br />
+
+                    <div class="field-btn">
+                        <label class="form-label" for="name-4"> text </label>
+                        <div class="input-group">
+                            <button class="btn btn-text-primary" tabindex="-1">
+                                <input
+                                    type="text"
+                                    name="name-4"
+                                    id="name-4"
+                                    class="form-control"
+                                    placeholder="placeholder"
+                                    required
+                                />
+                            </button>
+                        </div>
+                    </div>
+                    <br />
+
+                    <div class="field-btn">
+                        <label class="form-label" for="name-4"> contained </label>
+                        <div class="input-group">
+                            <button class="btn btn-primary" tabindex="-1">
+                                <input
+                                    type="text"
+                                    name="name-4"
+                                    id="name-4"
+                                    class="form-control"
+                                    placeholder="placeholder"
+                                    required
+                                />
+                            </button>
+                        </div>
+                    </div>
+                    <br />
+
+                    <div class="field-btn">
+                        <label class="form-label" for="name-4"> outlined </label>
+                        <div class="input-group">
+                            <button class="btn btn-outline-primary" tabindex="-1">
+                                <input
+                                    type="text"
+                                    name="name-4"
+                                    id="name-4"
+                                    class="form-control"
+                                    placeholder="placeholder"
+                                    required
+                                />
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="integrated-validation">
+                <div class="container">
+                    <h2 class="contact-title display-2">integrated validation</h2>
+                    <form action="#/dsfd" class="contact-form needs-validation" novalidate>
+                        <div class="field">
+                            <label class="form-label" for="name">name*</label>
+                            <div class="input-group">
+                                <input
+                                    type="text"
+                                    name="name"
+                                    id="name"
+                                    minlength="3"
+                                    maxlength="10"
+                                    class="form-control form-control-secondary"
+                                    required
+                                />
+                                <div class="valid-feedback">looks good.</div>
+                                <div class="invalid-feedback">name error.</div>
+                            </div>
+                        </div>
+                        <br />
+
+                        <div class="field">
+                            <label class="form-label" for="email">email*</label>
+                            <div class="input-group">
+                                <input
+                                    type="email"
+                                    name="email"
+                                    id="email"
+                                    class="form-control form-control-secondary"
+                                    required
+                                />
+                                <div class="valid-feedback">looks good.</div>
+                                <div class="invalid-feedback">email error.</div>
+                            </div>
+                        </div>
+                        <br />
+
+                        <button class="submit btn btn-primary" type="submit">submit</button>
+                    </form>
+                </div>
+            </section>
+
+            <section id="joi-validation">
+                <div class="container">
+                    <h2 class="example-title display-2">joi validation</h2>
+                    <form action="#/path" class="detailed-contact-form needs-validation" novalidate>
+                        <div class="field">
+                            <label class="form-label" for="name">name*</label>
+                            <div class="input-group">
+                                <input type="text" name="name" id="name" class="form-control form-control-secondary" />
+                                <div class="valid-feedback">looks good.</div>
+                                <div class="invalid-feedback">name error.</div>
+                            </div>
+                        </div>
+                        <br />
+
+                        <div class="field">
+                            <label class="form-label" for="email">email*</label>
+                            <div class="input-group">
+                                <input
+                                    type="email"
+                                    name="email"
+                                    id="email"
+                                    class="form-control form-control-secondary"
+                                />
+                                <div class="valid-feedback">looks good.</div>
+                                <div class="invalid-feedback">email error.</div>
+                            </div>
+                        </div>
+                        <br />
+
+                        <div class="field">
+                            <label class="form-label" for="message">message</label>
+                            <div class="input-group">
+                                <textarea
+                                    type="text"
+                                    name="message"
+                                    id="message"
+                                    class="form-control form-control-secondary"
+                                ></textarea>
+                                <div class="valid-feedback">looks good.</div>
+                                <div class="invalid-feedback">message error.</div>
+                            </div>
+                        </div>
+                        <br />
+
+                        <button class="submit btn btn-primary">submit</button>
+                    </form>
+                    <br />
+                    <br />
+                    <br />
+                    <hr />
+                    <br />
+                    <br />
+                    <br />
+
+                    <form action="#/path" class="btn-field-form needs-validation" novalidate>
+                        <div class="field-btn">
+                            <label class="form-label" for="name">name*</label>
+                            <div class="input-group">
+                                <button class="btn btn-text-primary" tabindex="-1">
+                                    <input
+                                        type="text"
+                                        name="name"
+                                        id="name"
+                                        class="form-control"
+                                        placeholder="placeholder"
+                                    />
+                                </button>
+                                <div class="valid-feedback">looks good.</div>
+                                <div class="invalid-feedback">name error.</div>
+                            </div>
+                        </div>
+                        <br />
+
+                        <div class="field-btn">
+                            <label class="form-label" for="email">email*</label>
+                            <div class="input-group">
+                                <button class="btn btn-primary" tabindex="-1">
+                                    <input
+                                        type="email"
+                                        name="email"
+                                        id="email"
+                                        class="form-control"
+                                        placeholder="placeholder"
+                                    />
+                                </button>
+                                <div class="valid-feedback">looks good.</div>
+                                <div class="invalid-feedback">email error.</div>
+                            </div>
+                        </div>
+                        <br />
+
+                        <div class="field-btn">
+                            <label class="form-label" for="message">message</label>
+                            <div class="input-group">
+                                <button class="btn btn-outline-primary" tabindex="-1">
+                                    <textarea
+                                        type="text"
+                                        name="message"
+                                        id="message"
+                                        class="form-control"
+                                        placeholder="placeholder"
+                                    ></textarea>
+                                </button>
+                                <div class="valid-feedback">looks good.</div>
+                                <div class="invalid-feedback">message error.</div>
+                            </div>
+                        </div>
+                        <br />
+
+                        <button class="submit btn btn-primary">submit</button>
+                    </form>
+                </div>
+            </section>
+
+            <section>
+                <div class="container">
+                    <h2 class="display-2">file input</h2>
+                    <input type="file" class="file-input" />
+                    <img class="file-image" src="" alt="" />
+                </div>
+                <script>
+                    const fileInput = document.querySelector(".file-input");
+                    const image = document.querySelector(".file-image");
+                    fileInput.addEventListener("change", (e) => {
+                        const reader = new FileReader();
+                        reader.readAsDataURL(e.target.files[0]);
+                        reader.onload = () => (image.src = reader.result);
+                    });
+                </script>
+            </section>
+
+            <section>
+                <div class="container">
+                    <h2 class="display-2">search</h2>
+                    <br />
+
+                    <h3 class="display-5 text-secondary">searches</h3>
+                    <br />
+
+                    <div class="wrapper" style="max-width: 300px">
+                        <div class="search">
+                            <div class="input-group">
+                                <input
+                                    type="text"
+                                    name="search-1"
+                                    id="search-1"
+                                    class="form-control form-control-primary"
+                                    placeholder="search"
+                                />
+                                <button class="btn btn-text-primary search-toggler">
+                                    <svg
+                                        width="14"
+                                        height="14"
+                                        viewBox="0 0 14 14"
+                                        fill="none"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                        <path
+                                            fill-rule="evenodd"
+                                            clip-rule="evenodd"
+                                            d="M9.68208 10.7458C8.66576 11.5361 7.38866 12.0067 6.00167 12.0067C2.68704 12.0067 0 9.31891 0 6.00335C0 2.68779 2.68704 0 6.00167 0C9.31631 0 12.0033 2.68779 12.0033 6.00335C12.0033 7.39059 11.533 8.66794 10.743 9.6845L13.7799 12.7186C14.0731 13.0115 14.0734 13.4867 13.7806 13.7799C13.4878 14.0731 13.0128 14.0734 12.7196 13.7805L9.68208 10.7458ZM10.5029 6.00335C10.5029 8.49002 8.48765 10.5059 6.00167 10.5059C3.5157 10.5059 1.50042 8.49002 1.50042 6.00335C1.50042 3.51668 3.5157 1.50084 6.00167 1.50084C8.48765 1.50084 10.5029 3.51668 10.5029 6.00335Z"
+                                            fill="#868FA0"
+                                        />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                        <br />
+
+                        <div class="search">
+                            <label class="form-label" for="search-2">with label</label>
+                            <div class="input-group">
+                                <input
+                                    type="text"
+                                    name="search-2"
+                                    id="search-2"
+                                    class="form-control form-control-secondary"
+                                    placeholder="search"
+                                />
+                                <button class="btn btn-text-secondary search-toggler">
+                                    <svg
+                                        width="14"
+                                        height="14"
+                                        viewBox="0 0 14 14"
+                                        fill="none"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                        <path
+                                            fill-rule="evenodd"
+                                            clip-rule="evenodd"
+                                            d="M9.68208 10.7458C8.66576 11.5361 7.38866 12.0067 6.00167 12.0067C2.68704 12.0067 0 9.31891 0 6.00335C0 2.68779 2.68704 0 6.00167 0C9.31631 0 12.0033 2.68779 12.0033 6.00335C12.0033 7.39059 11.533 8.66794 10.743 9.6845L13.7799 12.7186C14.0731 13.0115 14.0734 13.4867 13.7806 13.7799C13.4878 14.0731 13.0128 14.0734 12.7196 13.7805L9.68208 10.7458ZM10.5029 6.00335C10.5029 8.49002 8.48765 10.5059 6.00167 10.5059C3.5157 10.5059 1.50042 8.49002 1.50042 6.00335C1.50042 3.51668 3.5157 1.50084 6.00167 1.50084C8.48765 1.50084 10.5029 3.51668 10.5029 6.00335Z"
+                                            fill="#868FA0"
+                                        />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                        <br />
+                        <br />
+                        <br />
+                    </div>
+
+                    <h3 class="display-5 text-secondary">search buttons</h3>
+                    <br />
+
+                    <div class="wrapper" style="max-width: 300px">
+                        <div class="search-btn">
+                            <label class="form-label" for="search-2">text</label>
+                            <div class="input-group">
+                                <button class="btn btn-text-primary input-btn" tabindex="-1">
+                                    <input
+                                        type="text"
+                                        name="search-2"
+                                        id="search-2"
+                                        class="form-control"
+                                        placeholder="search"
+                                    />
+                                </button>
+                                <button class="btn btn-text-primary search-btn-toggler">
+                                    <svg
+                                        width="14"
+                                        height="14"
+                                        viewBox="0 0 14 14"
+                                        fill="none"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                        <path
+                                            fill-rule="evenodd"
+                                            clip-rule="evenodd"
+                                            d="M9.68208 10.7458C8.66576 11.5361 7.38866 12.0067 6.00167 12.0067C2.68704 12.0067 0 9.31891 0 6.00335C0 2.68779 2.68704 0 6.00167 0C9.31631 0 12.0033 2.68779 12.0033 6.00335C12.0033 7.39059 11.533 8.66794 10.743 9.6845L13.7799 12.7186C14.0731 13.0115 14.0734 13.4867 13.7806 13.7799C13.4878 14.0731 13.0128 14.0734 12.7196 13.7805L9.68208 10.7458ZM10.5029 6.00335C10.5029 8.49002 8.48765 10.5059 6.00167 10.5059C3.5157 10.5059 1.50042 8.49002 1.50042 6.00335C1.50042 3.51668 3.5157 1.50084 6.00167 1.50084C8.48765 1.50084 10.5029 3.51668 10.5029 6.00335Z"
+                                            fill="#868FA0"
+                                        />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                        <br />
+
+                        <div class="search-btn">
+                            <label class="form-label" for="search-2">contained</label>
+                            <div class="input-group">
+                                <button class="btn btn-primary input-btn" tabindex="-1">
+                                    <input
+                                        type="text"
+                                        name="search-2"
+                                        id="search-2"
+                                        class="form-control"
+                                        placeholder="search"
+                                    />
+                                </button>
+                                <button class="btn btn-text-light search-btn-toggler">
+                                    <svg
+                                        width="14"
+                                        height="14"
+                                        viewBox="0 0 14 14"
+                                        fill="none"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                        <path
+                                            fill-rule="evenodd"
+                                            clip-rule="evenodd"
+                                            d="M9.68208 10.7458C8.66576 11.5361 7.38866 12.0067 6.00167 12.0067C2.68704 12.0067 0 9.31891 0 6.00335C0 2.68779 2.68704 0 6.00167 0C9.31631 0 12.0033 2.68779 12.0033 6.00335C12.0033 7.39059 11.533 8.66794 10.743 9.6845L13.7799 12.7186C14.0731 13.0115 14.0734 13.4867 13.7806 13.7799C13.4878 14.0731 13.0128 14.0734 12.7196 13.7805L9.68208 10.7458ZM10.5029 6.00335C10.5029 8.49002 8.48765 10.5059 6.00167 10.5059C3.5157 10.5059 1.50042 8.49002 1.50042 6.00335C1.50042 3.51668 3.5157 1.50084 6.00167 1.50084C8.48765 1.50084 10.5029 3.51668 10.5029 6.00335Z"
+                                            fill="#868FA0"
+                                        />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                        <br />
+
+                        <div class="search-btn">
+                            <label class="form-label" for="search-2">outlined</label>
+                            <div class="input-group">
+                                <button class="btn btn-outline-primary input-btn" tabindex="-1">
+                                    <input
+                                        type="text"
+                                        name="search-2"
+                                        id="search-2"
+                                        class="form-control"
+                                        placeholder="search"
+                                    />
+                                </button>
+                                <button class="btn btn-text-primary search-btn-toggler" >
+                                    <svg
+                                        width="14"
+                                        height="14"
+                                        viewBox="0 0 14 14"
+                                        fill="none"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                        <path
+                                            fill-rule="evenodd"
+                                            clip-rule="evenodd"
+                                            d="M9.68208 10.7458C8.66576 11.5361 7.38866 12.0067 6.00167 12.0067C2.68704 12.0067 0 9.31891 0 6.00335C0 2.68779 2.68704 0 6.00167 0C9.31631 0 12.0033 2.68779 12.0033 6.00335C12.0033 7.39059 11.533 8.66794 10.743 9.6845L13.7799 12.7186C14.0731 13.0115 14.0734 13.4867 13.7806 13.7799C13.4878 14.0731 13.0128 14.0734 12.7196 13.7805L9.68208 10.7458ZM10.5029 6.00335C10.5029 8.49002 8.48765 10.5059 6.00167 10.5059C3.5157 10.5059 1.50042 8.49002 1.50042 6.00335C1.50042 3.51668 3.5157 1.50084 6.00167 1.50084C8.48765 1.50084 10.5029 3.51668 10.5029 6.00335Z"
+                                            fill="#868FA0"
+                                        />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                        <br />
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <div class="container">
+                <h2 class="display-2">footer</h2>
+                <div class="links-group" style="display: inline-flex; align-items: flex-start; flex-direction: column">
+                    <a href="#/" target="_blank" class="link link-secondary"> external link default </a>
+                    <a href="#/" target="_blank" class="link link-primary" underline="hover"> external link hover </a>
+                    <a href="#/" target="_blank" class="link link-success" underline="always"> external link always </a>
+                    <a href="#/" target="_blank" class="link link-danger" underline="none"> external link none </a>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>

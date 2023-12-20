@@ -1,0 +1,178 @@
+// // JS REORDER
+// .js-reorder {
+    .reorder {
+        &-list {
+            padding: 20px 15px;
+            margin-bottom: 30px;
+            border-radius: 5px;
+            // display: flex;
+            width: 250px;
+        }
+
+        &-item {
+            border: 1px solid #000;
+            padding: 10px;
+            width: 100%;
+            border-radius: 5px;
+            background-color: #fff;
+            display: flex;
+            cursor: pointer;
+            margin-bottom: 1rem;
+            .close {
+                margin-left: auto;
+                cursor: pointer;
+                transition: 0.3s ease;
+                padding: 0 5px;
+                &:hover {
+                    color: red;
+                }
+            }
+        }
+    }
+    .sortable-chosen {
+      border-color: green;
+    }
+    .sortable-ghost {
+        opacity: 0;
+    }
+// }
+
+// SORTABLEJS REORDER
+.sortableJS-reorder {
+    .reorder {
+        &-list {
+            padding: 20px 15px;
+            margin-bottom: 30px;
+            border-radius: 5px;
+            // display: flex;
+            width: 250px;
+        }
+
+        &-item {
+            border: 1px solid #000;
+            padding: 10px;
+            width: 100%;
+            border-radius: 5px;
+            background-color: #fff;
+            display: flex;
+            cursor: pointer;
+            margin-bottom: 1rem;
+            .close {
+                margin-left: auto;
+                cursor: pointer;
+                transition: 0.3s ease;
+                padding: 0 5px;
+                &:hover {
+                    color: red;
+                }
+            }
+        }
+    }
+    .sortable-chosen {
+      border-color: green;
+    }
+    .sortable-ghost {
+        opacity: 0;
+    }
+}
+// SORTABLEJS KANBAN
+.sortableJS-kanban {
+    .wrapper {
+        display: flex;
+        align-items: flex-start;
+        gap: 50px;
+    }
+    .board {
+        border: 1px solid #000;
+        border-radius: 10px;
+        padding: 10px;
+        width: 350px;
+        &-list {
+            // overflow-y: auto;
+            // max-height: 500px;
+            &-inner {
+                padding: 20px 10px;
+                // transition: background-color .3s ease;
+                border-radius: 10px;
+                // overflow: hidden;
+            }
+        }
+
+        &-item {
+            width: 100%;
+            border: 1px solid #000;
+            padding: 10px;
+            border-radius: 5px;
+            background-color: #fff;
+            display: flex;
+            cursor: pointer;
+            margin-bottom: 1rem;
+            .close {
+                margin-left: auto;
+                cursor: pointer;
+                transition: 0.3s ease;
+                padding: 0 5px;
+                &:hover {
+                    color: red;
+                }
+            }
+        }
+    }
+    .sortable-chosen {
+        border-color: green;
+      }
+    .sortable-ghost {
+        opacity: 0;
+    }
+}
+
+// // JS KANBAN
+// .js-kanban {
+//     .wrapper {
+//         display: flex;
+//         align-items: flex-start;
+//         gap: 50px;
+//     }
+//     .board {
+//         border: 1px solid #000;
+//         border-radius: 10px;
+//         padding: 10px;
+//         width: 350px;
+//         &-list {
+//             // overflow-y: auto;
+//             // max-height: 500px;
+//             &-inner {
+//                 padding: 20px 10px;
+//                 // transition: background-color .3s ease;
+//                 border-radius: 10px;
+//                 // overflow: hidden;
+//             }
+//         }
+
+//         &-item {
+//             width: 100%;
+//             border: 1px solid #000;
+//             padding: 10px;
+//             border-radius: 5px;
+//             background-color: #fff;
+//             display: flex;
+//             cursor: pointer;
+//             margin-bottom: 1rem;
+//             .close {
+//                 margin-left: auto;
+//                 cursor: pointer;
+//                 transition: 0.3s ease;
+//                 padding: 0 5px;
+//                 &:hover {
+//                     color: red;
+//                 }
+//             }
+//         }
+//     }
+//     .sortable-chosen {
+//         border-color: green;
+//       }
+//     .sortable-ghost {
+//         opacity: 0;
+//     }
+// }
